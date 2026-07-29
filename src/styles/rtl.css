@@ -1,0 +1,144 @@
+/* ============================================
+   INDIBUZ — RTL Overrides (Arabic & Sindhi)
+   ============================================ */
+
+[dir="rtl"] {
+  /* Typography adjustments */
+  letter-spacing: 0 !important;
+}
+
+[dir="rtl"] .nav-link,
+[dir="rtl"] .section-label,
+[dir="rtl"] .btn,
+[dir="rtl"] .category-tab,
+[dir="rtl"] .cert-badge-full,
+[dir="rtl"] .stat-label,
+[dir="rtl"] .footer-heading,
+[dir="rtl"] .trust-badge,
+[dir="rtl"] .product-card-category,
+[dir="rtl"] .contact-detail-label {
+  letter-spacing: 0;
+}
+
+/* Layout flips */
+[dir="rtl"] .header-inner {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-list {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-link::after {
+  left: auto;
+  right: 0;
+}
+
+/* Lang dropdown */
+[dir="rtl"] .lang-dropdown {
+  right: auto;
+  left: 0;
+}
+
+[dir="rtl"] .lang-option {
+  text-align: right;
+}
+
+/* Footer */
+[dir="rtl"] .footer-links a {
+  text-align: right;
+}
+
+/* Forms */
+[dir="rtl"] .form-label {
+  text-align: right;
+}
+
+[dir="rtl"] .form-input,
+[dir="rtl"] .form-textarea,
+[dir="rtl"] .form-select {
+  text-align: right;
+}
+
+[dir="rtl"] .form-error {
+  justify-content: flex-end;
+}
+
+/* Product specs */
+[dir="rtl"] .product-spec {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .product-spec-value {
+  text-align: left;
+}
+
+/* Timeline */
+[dir="rtl"] .timeline {
+  padding-left: 0;
+  padding-right: var(--space-3xl);
+}
+
+[dir="rtl"] .timeline::before {
+  left: auto;
+  right: 14px;
+}
+
+[dir="rtl"] .timeline-dot {
+  left: auto;
+  right: calc(-1 * var(--space-3xl) + 6px);
+}
+
+/* Process flow */
+[dir="rtl"] .process-step::after {
+  right: auto;
+  left: calc(-1 * var(--space-xl));
+  background: linear-gradient(to left, var(--gold), transparent);
+}
+
+/* Contact details */
+[dir="rtl"] .contact-detail {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .contact-detail-text {
+  text-align: right;
+}
+
+/* Brand section */
+[dir="rtl"] .brand-text .section-label {
+  text-align: right;
+}
+
+/* WhatsApp float */
+[dir="rtl"] .whatsapp-float {
+  right: auto;
+  left: 24px;
+}
+
+/* Brand accent */
+[dir="rtl"] .brand-image-accent {
+  left: auto;
+  right: -20px;
+}
+
+/* Mobile overlay */
+[dir="rtl"] .mobile-nav-list {
+  text-align: center;
+}
+
+/* Editorial product alternate */
+[dir="rtl"] .product-editorial:nth-child(even) {
+  direction: ltr;
+}
+
+[dir="rtl"] .product-editorial:nth-child(odd) {
+  direction: rtl;
+}
+
+@media (max-width: 767px) {
+  [dir="rtl"] .whatsapp-float {
+    left: 16px;
+    right: auto;
+  }
+}
