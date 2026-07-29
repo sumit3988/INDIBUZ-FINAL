@@ -1,0 +1,302 @@
+[
+  {
+    "model": "api.category",
+    "pk": 1,
+    "fields": {
+      "name": "BASMATI",
+      "slug": "basmati"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 1,
+    "fields": {
+      "name": "1121 Steam Basmati Rice (30Kg)",
+      "category": 1,
+      "grain_length": "8.35mm+ (cooked: 20mm+)",
+      "moisture_max": "Max 12%",
+      "broken_percent": "Max 1%",
+      "packaging_options": "30kg PP bag",
+      "description": "The crown jewel of Indian rice \u2014 longest grain basmati variety with premium aroma, soft fluffy texture, and excellent elongation.",
+      "original_price": "4500.00",
+      "sale_price": "3300.00",
+      "is_active": true,
+      "sort_order": 1,
+      "created_at": "2026-04-10T12:00:00Z",
+      "updated_at": "2026-07-29T20:45:16.748550Z",
+      "slug": "slug-1-1"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 2,
+    "fields": {
+      "name": "1121 Golden Sella Basmati Rice (30Kg)",
+      "category": 1,
+      "grain_length": "8.35mm+",
+      "moisture_max": "Max 12%",
+      "broken_percent": "Max 1%",
+      "packaging_options": "30kg PP bag",
+      "description": "Golden sella basmati rice with robust non-sticky grains, rich golden hue, and superior cooking stability.",
+      "original_price": "4200.00",
+      "sale_price": "3000.00",
+      "is_active": true,
+      "sort_order": 2,
+      "created_at": "2026-04-10T12:00:00Z",
+      "updated_at": "2026-07-29T20:45:16.748550Z",
+      "slug": "slug-2-2"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 3,
+    "fields": {
+      "name": "1509 Steam Basmati Rice (30Kg)",
+      "category": 1,
+      "grain_length": "8.3mm+",
+      "moisture_max": "Max 12%",
+      "broken_percent": "Max 2%",
+      "packaging_options": "30kg PP bag",
+      "description": "A strong grain variety with excellent cooking properties. Strong grain structure with less breakage during cooking.",
+      "original_price": "3600.00",
+      "sale_price": "2900.00",
+      "is_active": true,
+      "sort_order": 3,
+      "created_at": "2026-04-10T12:00:00Z",
+      "updated_at": "2026-07-29T20:45:16.748550Z",
+      "slug": "slug-3-3"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 4,
+    "fields": {
+      "name": "1509 Golden Sella Basmati Rice (30Kg)",
+      "category": 1,
+      "grain_length": "8.3mm+",
+      "moisture_max": "Max 12%",
+      "broken_percent": "Max 2%",
+      "packaging_options": "30kg PP bag",
+      "description": "Premium parboiled 1509 Basmati rice offering rich aroma and golden texture at a value-for-money price point.",
+      "original_price": "3300.00",
+      "sale_price": "2760.00",
+      "is_active": true,
+      "sort_order": 4,
+      "created_at": "2026-04-10T12:00:00Z",
+      "updated_at": "2026-07-29T20:45:16.748550Z",
+      "slug": "slug-4-4"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 5,
+    "fields": {
+      "name": "Traditional Basmati Rice (30Kg)",
+      "category": 1,
+      "grain_length": "7.9mm+",
+      "moisture_max": "Max 12%",
+      "broken_percent": "Max 2%",
+      "packaging_options": "30kg PP bag",
+      "description": "Pure traditional basmati variety prized for its authentic natural aroma, delicate texture, and rich heritage flavor.",
+      "original_price": "4500.00",
+      "sale_price": "3600.00",
+      "is_active": true,
+      "sort_order": 5,
+      "created_at": "2026-04-10T12:00:00Z",
+      "updated_at": "2026-07-29T20:45:16.748550Z",
+      "slug": "slug-5-5"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 6,
+    "fields": {
+      "name": "1718 Steam Basmati Rice (30Kg)",
+      "category": 1,
+      "grain_length": "8.0mm+",
+      "moisture_max": "Max 12%",
+      "broken_percent": "Max 2%",
+      "packaging_options": "30kg PP bag",
+      "description": "An upgraded basmati variety offering long grain length and aroma with superior disease resistance and grain stability.",
+      "original_price": "3600.00",
+      "sale_price": "3000.00",
+      "is_active": true,
+      "sort_order": 6,
+      "created_at": "2026-04-10T12:00:00Z",
+      "updated_at": "2026-07-29T20:45:16.748550Z",
+      "slug": "slug-6-6"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 2,
+    "fields": {
+      "name": "NON_BASMATI",
+      "slug": "non_basmati"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 7,
+    "fields": {
+      "name": "Sona Masuri Rice (Non Basmati Rice) (30Kg)",
+      "category": 2,
+      "grain_length": "Medium grain",
+      "moisture_max": "Max 14%",
+      "broken_percent": "Max 5%",
+      "packaging_options": "30kg PP bag",
+      "description": "Lightweight, aromatic medium-grain rice beloved for daily meals, biryani, and pulao. Low starch content.",
+      "original_price": "1200.00",
+      "sale_price": "1050.00",
+      "is_active": true,
+      "sort_order": 7,
+      "created_at": "2026-04-10T12:00:00Z",
+      "updated_at": "2026-07-29T20:45:16.748550Z",
+      "slug": "slug-8-8"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 8,
+    "fields": {
+      "name": "Parmal Rice (Non Basmati Rice) (30Kg)",
+      "category": 2,
+      "grain_length": "Short-medium",
+      "moisture_max": "Max 14%",
+      "broken_percent": "Max 5%",
+      "packaging_options": "30kg PP bag",
+      "description": "Versatile short-to-medium grain rice widely used across commercial food service and home kitchens. Reliable and nutritious.",
+      "original_price": "1200.00",
+      "sale_price": "1050.00",
+      "is_active": true,
+      "sort_order": 8,
+      "created_at": "2026-04-10T12:00:00Z",
+      "updated_at": "2026-07-29T20:45:16.748550Z",
+      "slug": "slug-9-9"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 9,
+    "fields": {
+      "name": "IR 64 Non Basmati Rice",
+      "category": 2,
+      "grain_length": "5.8\u20136.3mm",
+      "moisture_max": "Max 14%",
+      "broken_percent": "5% / 25% options",
+      "packaging_options": "25kg, 50kg PP bags",
+      "description": "Highly exported non-basmati variety popular worldwide. Excellent nutritional retention through parboiling.",
+      "original_price": "1050.00",
+      "sale_price": "999.00",
+      "is_active": true,
+      "sort_order": 9,
+      "created_at": "2026-04-10T12:00:00Z",
+      "updated_at": "2026-07-29T20:45:16.748550Z",
+      "slug": "slug-10-10"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 3,
+    "fields": {
+      "name": "ATTA",
+      "slug": "atta"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 10,
+    "fields": {
+      "name": "100% Whole Wheat Atta (10Kg)",
+      "category": 3,
+      "grain_length": "Fine Ground",
+      "moisture_max": "Max 11%",
+      "broken_percent": "0%",
+      "packaging_options": "10kg Bag",
+      "description": "100% pure whole wheat flour ground from premium Indian wheat grains. High fiber, soft rotis, no added maida.",
+      "original_price": "400.00",
+      "sale_price": "350.00",
+      "is_active": true,
+      "sort_order": 10,
+      "created_at": "2026-04-10T12:00:00Z",
+      "updated_at": "2026-07-29T20:45:16.748550Z",
+      "slug": "slug-12-12"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 11,
+    "fields": {
+      "name": "100% Whole Wheat Atta (5Kg)",
+      "category": 3,
+      "grain_length": "Fine Ground",
+      "moisture_max": "Max 11%",
+      "broken_percent": "0%",
+      "packaging_options": "5kg Bag",
+      "description": "100% pure whole wheat flour ground from selected wheat grains. Keeps rotis soft for hours.",
+      "original_price": "200.00",
+      "sale_price": "180.00",
+      "is_active": true,
+      "sort_order": 11,
+      "created_at": "2026-04-10T12:00:00Z",
+      "updated_at": "2026-07-29T20:45:16.748550Z",
+      "slug": "slug-13-13"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 4,
+    "fields": {
+      "name": "CHILLI",
+      "slug": "chilli"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 12,
+    "fields": {
+      "name": "Premium Dried Red Chillies",
+      "category": 4,
+      "grain_length": "",
+      "moisture_max": "Max 10%",
+      "broken_percent": "Max 3%",
+      "packaging_options": "25kg PP / 50kg Jute bags",
+      "description": "Premium sun-dried whole red chillies sourced from India's finest chilli growing belts. High heat & deep color varieties.",
+      "original_price": null,
+      "sale_price": null,
+      "is_active": true,
+      "sort_order": 12,
+      "created_at": "2026-04-10T12:00:00Z",
+      "updated_at": "2026-07-29T20:45:16.748550Z",
+      "slug": "slug-15-15"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 5,
+    "fields": {
+      "name": "CHILLI_POWDER",
+      "slug": "chilli_powder"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 13,
+    "fields": {
+      "name": "Premium Red Chilli Powder",
+      "category": 5,
+      "grain_length": "ASTA 80+ / 100+ / 120+",
+      "moisture_max": "Max 10%",
+      "broken_percent": "100% Pure",
+      "packaging_options": "1kg, 5kg, 25kg bags",
+      "description": "Pure ground red chilli powder with zero added colors or preservatives. Vibrant color and balanced heat.",
+      "original_price": null,
+      "sale_price": null,
+      "is_active": true,
+      "sort_order": 13,
+      "created_at": "2026-04-10T12:00:00Z",
+      "updated_at": "2026-07-29T20:45:16.748550Z",
+      "slug": "slug-17-17"
+    }
+  }
+]
