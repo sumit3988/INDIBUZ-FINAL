@@ -1,249 +1,1536 @@
 [
   {
+    "model": "api.category",
+    "pk": 1,
+    "fields": {
+      "name": "Basmati Rice",
+      "slug": "basmati-rice",
+      "is_active": true
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 2,
+    "fields": {
+      "name": "Pulses & Dal",
+      "slug": "pulses-and-dal",
+      "is_active": true
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 3,
+    "fields": {
+      "name": "Edible Oils & Ghee",
+      "slug": "edible-oils-and-ghee",
+      "is_active": true
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 4,
+    "fields": {
+      "name": "Sauces & Condiments",
+      "slug": "sauces-and-condiments",
+      "is_active": true
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 5,
+    "fields": {
+      "name": "Tea & Beverages",
+      "slug": "tea-and-beverages",
+      "is_active": true
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 6,
+    "fields": {
+      "name": "Horeca & Disposable Items",
+      "slug": "horeca-and-disposable-items",
+      "is_active": true
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 7,
+    "fields": {
+      "name": "Masala Powders",
+      "slug": "masala-powders",
+      "is_active": true
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 8,
+    "fields": {
+      "name": "Whole Spices",
+      "slug": "whole-spices",
+      "is_active": true
+    }
+  },
+  {
     "model": "api.product",
     "pk": 1,
     "fields": {
-      "name": "1121 Steam Basmati Rice (30Kg)",
-      "category": "BASMATI",
-      "variant": "Steam, Long Grain",
-      "grain_length": "8.35mm+ (cooked: 20mm+)",
-      "moisture_max": "Max 12%",
-      "broken_percent": "Max 1%",
-      "packaging_options": "30kg PP bag",
-      "description": "The crown jewel of Indian rice — longest grain basmati variety with premium aroma, soft fluffy texture, and excellent elongation.",
-      "original_price": "4500.00",
-      "sale_price": "3300.00",
+      "name": "1121 Steam Basmati Rice (Per Kg)",
+      "category": 1,
+      "description": "Premium 1121 Steam Basmati Rice from INDIBUZ Smart Mart",
+      "sale_price": "107",
+      "original_price": "107",
+      "weight": "Per Kg",
       "is_active": true,
+      "slug": "1121-steam-basmati-rice-per-kg",
       "sort_order": 1,
-      "created_at": "2026-04-10T12:00:00Z"
+      "created_at": "2026-08-01T06:52:38.143122Z",
+      "updated_at": "2026-08-01T06:52:38.143153Z"
     }
   },
   {
     "model": "api.product",
     "pk": 2,
     "fields": {
-      "name": "1121 Golden Sella Basmati Rice (30Kg)",
-      "category": "BASMATI",
-      "variant": "Golden Sella, Parboiled",
-      "grain_length": "8.35mm+",
-      "moisture_max": "Max 12%",
-      "broken_percent": "Max 1%",
-      "packaging_options": "30kg PP bag",
-      "description": "Golden sella basmati rice with robust non-sticky grains, rich golden hue, and superior cooking stability.",
-      "original_price": "4200.00",
-      "sale_price": "3000.00",
+      "name": "1121 Golden Sella Rice (Per Kg)",
+      "category": 1,
+      "description": "Premium 1121 Golden Sella Rice from INDIBUZ Smart Mart",
+      "sale_price": "105",
+      "original_price": "105",
+      "weight": "Per Kg",
       "is_active": true,
+      "slug": "1121-golden-sella-rice-per-kg",
       "sort_order": 2,
-      "created_at": "2026-04-10T12:00:00Z"
+      "created_at": "2026-08-01T06:52:38.143168Z",
+      "updated_at": "2026-08-01T06:52:38.143170Z"
     }
   },
   {
     "model": "api.product",
     "pk": 3,
     "fields": {
-      "name": "1509 Steam Basmati Rice (30Kg)",
-      "category": "BASMATI",
-      "variant": "Steam, White",
-      "grain_length": "8.3mm+",
-      "moisture_max": "Max 12%",
-      "broken_percent": "Max 2%",
-      "packaging_options": "30kg PP bag",
-      "description": "A strong grain variety with excellent cooking properties. Strong grain structure with less breakage during cooking.",
-      "original_price": "3600.00",
-      "sale_price": "2900.00",
+      "name": "9090 Traditional Basmati Rice (1 Kg Pouch)",
+      "category": 1,
+      "description": "Premium 9090 Traditional Basmati Rice from INDIBUZ Smart Mart",
+      "sale_price": "75",
+      "original_price": "75",
+      "weight": "1 Kg Pouch",
       "is_active": true,
+      "slug": "9090-traditional-basmati-rice-1-kg-pouch",
       "sort_order": 3,
-      "created_at": "2026-04-10T12:00:00Z"
+      "created_at": "2026-08-01T06:52:38.143177Z",
+      "updated_at": "2026-08-01T06:52:38.143179Z"
     }
   },
   {
     "model": "api.product",
     "pk": 4,
     "fields": {
-      "name": "1509 Golden Sella Basmati Rice (30Kg)",
-      "category": "BASMATI",
-      "variant": "Golden Sella",
-      "grain_length": "8.3mm+",
-      "moisture_max": "Max 12%",
-      "broken_percent": "Max 2%",
-      "packaging_options": "30kg PP bag",
-      "description": "Premium parboiled 1509 Basmati rice offering rich aroma and golden texture at a value-for-money price point.",
-      "original_price": "3300.00",
-      "sale_price": "2760.00",
+      "name": "9090 Traditional Basmati Rice (35 Kg Bag)",
+      "category": 1,
+      "description": "Premium 9090 Traditional Basmati Rice from INDIBUZ Smart Mart",
+      "sale_price": "2520",
+      "original_price": "2520",
+      "weight": "35 Kg Bag",
       "is_active": true,
+      "slug": "9090-traditional-basmati-rice-35-kg-bag",
       "sort_order": 4,
-      "created_at": "2026-04-10T12:00:00Z"
+      "created_at": "2026-08-01T06:52:38.143184Z",
+      "updated_at": "2026-08-01T06:52:38.143186Z"
     }
   },
   {
     "model": "api.product",
     "pk": 5,
     "fields": {
-      "name": "Traditional Basmati Rice (30Kg)",
-      "category": "BASMATI",
-      "variant": "Raw, Authentic Aroma",
-      "grain_length": "7.9mm+",
-      "moisture_max": "Max 12%",
-      "broken_percent": "Max 2%",
-      "packaging_options": "30kg PP bag",
-      "description": "Pure traditional basmati variety prized for its authentic natural aroma, delicate texture, and rich heritage flavor.",
-      "original_price": "4500.00",
-      "sale_price": "3600.00",
+      "name": "1060 Basmati Rice (35 Kg Bag)",
+      "category": 1,
+      "description": "Premium 1060 Basmati Rice from INDIBUZ Smart Mart",
+      "sale_price": "2765",
+      "original_price": "2765",
+      "weight": "35 Kg Bag",
       "is_active": true,
+      "slug": "1060-basmati-rice-35-kg-bag",
       "sort_order": 5,
-      "created_at": "2026-04-10T12:00:00Z"
+      "created_at": "2026-08-01T06:52:38.143191Z",
+      "updated_at": "2026-08-01T06:52:38.143193Z"
     }
   },
   {
     "model": "api.product",
     "pk": 6,
     "fields": {
-      "name": "1718 Steam Basmati Rice (30Kg)",
-      "category": "BASMATI",
-      "variant": "Steam",
-      "grain_length": "8.0mm+",
-      "moisture_max": "Max 12%",
-      "broken_percent": "Max 2%",
-      "packaging_options": "30kg PP bag",
-      "description": "An upgraded basmati variety offering long grain length and aroma with superior disease resistance and grain stability.",
-      "original_price": "3600.00",
-      "sale_price": "3000.00",
+      "name": "Lal Khajur Rice (28.4 Kg Bag)",
+      "category": 1,
+      "description": "Premium Lal Khajur Rice from INDIBUZ Smart Mart",
+      "sale_price": "1900",
+      "original_price": "1900",
+      "weight": "28.4 Kg Bag",
       "is_active": true,
+      "slug": "lal-khajur-rice-28.4-kg-bag",
       "sort_order": 6,
-      "created_at": "2026-04-10T12:00:00Z"
+      "created_at": "2026-08-01T06:52:38.143197Z",
+      "updated_at": "2026-08-01T06:52:38.143199Z"
     }
   },
   {
     "model": "api.product",
     "pk": 7,
     "fields": {
-      "name": "Sona Masuri Rice (Non Basmati Rice) (30Kg)",
-      "category": "NON_BASMATI",
-      "variant": "Medium Grain, Low Starch",
-      "grain_length": "Medium grain",
-      "moisture_max": "Max 14%",
-      "broken_percent": "Max 5%",
-      "packaging_options": "30kg PP bag",
-      "description": "Lightweight, aromatic medium-grain rice beloved for daily meals, biryani, and pulao. Low starch content.",
-      "original_price": "1200.00",
-      "sale_price": "1050.00",
+      "name": "1401 Steam Basmati Rice (Per Kg)",
+      "category": 1,
+      "description": "Premium 1401 Steam Basmati Rice from INDIBUZ Smart Mart",
+      "sale_price": "105",
+      "original_price": "105",
+      "weight": "Per Kg",
       "is_active": true,
+      "slug": "1401-steam-basmati-rice-per-kg",
       "sort_order": 7,
-      "created_at": "2026-04-10T12:00:00Z"
+      "created_at": "2026-08-01T06:52:38.143204Z",
+      "updated_at": "2026-08-01T06:52:38.143205Z"
     }
   },
   {
     "model": "api.product",
     "pk": 8,
     "fields": {
-      "name": "Parmal Rice (Non Basmati Rice) (30Kg)",
-      "category": "NON_BASMATI",
-      "variant": "Short-Medium Grain",
-      "grain_length": "Short-medium",
-      "moisture_max": "Max 14%",
-      "broken_percent": "Max 5%",
-      "packaging_options": "30kg PP bag",
-      "description": "Versatile short-to-medium grain rice widely used across commercial food service and home kitchens. Reliable and nutritious.",
-      "original_price": "1200.00",
-      "sale_price": "1050.00",
+      "name": "1718 Steam Basmati Rice (Per Kg)",
+      "category": 1,
+      "description": "Premium 1718 Steam Basmati Rice from INDIBUZ Smart Mart",
+      "sale_price": "104",
+      "original_price": "104",
+      "weight": "Per Kg",
       "is_active": true,
+      "slug": "1718-steam-basmati-rice-per-kg",
       "sort_order": 8,
-      "created_at": "2026-04-10T12:00:00Z"
+      "created_at": "2026-08-01T06:52:38.143211Z",
+      "updated_at": "2026-08-01T06:52:38.143212Z"
     }
   },
   {
     "model": "api.product",
     "pk": 9,
     "fields": {
-      "name": "IR 64 Non Basmati Rice",
-      "category": "NON_BASMATI",
-      "variant": "Parboiled / Raw",
-      "grain_length": "5.8–6.3mm",
-      "moisture_max": "Max 14%",
-      "broken_percent": "5% / 25% options",
-      "packaging_options": "25kg, 50kg PP bags",
-      "description": "Highly exported non-basmati variety popular worldwide. Excellent nutritional retention through parboiling.",
-      "original_price": "1050.00",
-      "sale_price": "999.00",
+      "name": "Arhar (Toor) Dal Premium (1 Kg)",
+      "category": 2,
+      "description": "Premium Arhar (Toor) Dal Premium from INDIBUZ Smart Mart",
+      "sale_price": "130",
+      "original_price": "130",
+      "weight": "1 Kg",
       "is_active": true,
+      "slug": "arhar-toor-dal-premium-1-kg",
       "sort_order": 9,
-      "created_at": "2026-04-10T12:00:00Z"
+      "created_at": "2026-08-01T06:52:38.143224Z",
+      "updated_at": "2026-08-01T06:52:38.143225Z"
     }
   },
   {
     "model": "api.product",
     "pk": 10,
     "fields": {
-      "name": "100% Whole Wheat Atta (10Kg)",
-      "category": "ATTA",
-      "variant": "Sharbati Whole Wheat",
-      "grain_length": "Fine Ground",
-      "moisture_max": "Max 11%",
-      "broken_percent": "0%",
-      "packaging_options": "10kg Bag",
-      "description": "100% pure whole wheat flour ground from premium Indian wheat grains. High fiber, soft rotis, no added maida.",
-      "original_price": "400.00",
-      "sale_price": "350.00",
+      "name": "Arhar (Toor) Dal Medium (1 Kg)",
+      "category": 2,
+      "description": "Premium Arhar (Toor) Dal Medium from INDIBUZ Smart Mart",
+      "sale_price": "120",
+      "original_price": "120",
+      "weight": "1 Kg",
       "is_active": true,
+      "slug": "arhar-toor-dal-medium-1-kg",
       "sort_order": 10,
-      "created_at": "2026-04-10T12:00:00Z"
+      "created_at": "2026-08-01T06:52:38.143230Z",
+      "updated_at": "2026-08-01T06:52:38.143232Z"
     }
   },
   {
     "model": "api.product",
     "pk": 11,
     "fields": {
-      "name": "100% Whole Wheat Atta (5Kg)",
-      "category": "ATTA",
-      "variant": "Sharbati Whole Wheat",
-      "grain_length": "Fine Ground",
-      "moisture_max": "Max 11%",
-      "broken_percent": "0%",
-      "packaging_options": "5kg Bag",
-      "description": "100% pure whole wheat flour ground from selected wheat grains. Keeps rotis soft for hours.",
-      "original_price": "200.00",
-      "sale_price": "180.00",
+      "name": "Chana Dal (1 Kg)",
+      "category": 2,
+      "description": "Premium Chana Dal from INDIBUZ Smart Mart",
+      "sale_price": "80",
+      "original_price": "80",
+      "weight": "1 Kg",
       "is_active": true,
+      "slug": "chana-dal-1-kg",
       "sort_order": 11,
-      "created_at": "2026-04-10T12:00:00Z"
+      "created_at": "2026-08-01T06:52:38.143236Z",
+      "updated_at": "2026-08-01T06:52:38.143238Z"
     }
   },
   {
     "model": "api.product",
     "pk": 12,
     "fields": {
-      "name": "Premium Dried Red Chillies",
-      "category": "CHILLI",
-      "variant": "Teja, Byadgi, Guntur S4",
-      "grain_length": "",
-      "moisture_max": "Max 10%",
-      "broken_percent": "Max 3%",
-      "packaging_options": "25kg PP / 50kg Jute bags",
-      "description": "Premium sun-dried whole red chillies sourced from India's finest chilli growing belts. High heat & deep color varieties.",
-      "original_price": null,
-      "sale_price": null,
+      "name": "Moong Dhuli (1 Kg)",
+      "category": 2,
+      "description": "Premium Moong Dhuli from INDIBUZ Smart Mart",
+      "sale_price": "105",
+      "original_price": "105",
+      "weight": "1 Kg",
       "is_active": true,
+      "slug": "moong-dhuli-1-kg",
       "sort_order": 12,
-      "created_at": "2026-04-10T12:00:00Z"
+      "created_at": "2026-08-01T06:52:38.143242Z",
+      "updated_at": "2026-08-01T06:52:38.143243Z"
     }
   },
   {
     "model": "api.product",
     "pk": 13,
     "fields": {
-      "name": "Premium Red Chilli Powder",
-      "category": "CHILLI_POWDER",
-      "variant": "Teja, Byadgi Blend",
-      "grain_length": "ASTA 80+ / 100+ / 120+",
-      "moisture_max": "Max 10%",
-      "broken_percent": "100% Pure",
-      "packaging_options": "1kg, 5kg, 25kg bags",
-      "description": "Pure ground red chilli powder with zero added colors or preservatives. Vibrant color and balanced heat.",
-      "original_price": null,
-      "sale_price": null,
+      "name": "Moong Sabut (1 Kg)",
+      "category": 2,
+      "description": "Premium Moong Sabut from INDIBUZ Smart Mart",
+      "sale_price": "100",
+      "original_price": "100",
+      "weight": "1 Kg",
       "is_active": true,
+      "slug": "moong-sabut-1-kg",
       "sort_order": 13,
-      "created_at": "2026-04-10T12:00:00Z"
+      "created_at": "2026-08-01T06:52:38.143247Z",
+      "updated_at": "2026-08-01T06:52:38.143249Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 14,
+    "fields": {
+      "name": "Masur Dal Dulli (1 Kg)",
+      "category": 2,
+      "description": "Premium Masur Dal Dulli from INDIBUZ Smart Mart",
+      "sale_price": "80",
+      "original_price": "80",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "masur-dal-dulli-1-kg",
+      "sort_order": 14,
+      "created_at": "2026-08-01T06:52:38.143254Z",
+      "updated_at": "2026-08-01T06:52:38.143256Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 15,
+    "fields": {
+      "name": "Kala Masur (Sabut) (1 Kg)",
+      "category": 2,
+      "description": "Premium Kala Masur (Sabut) from INDIBUZ Smart Mart",
+      "sale_price": "76",
+      "original_price": "76",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "kala-masur-sabut-1-kg",
+      "sort_order": 15,
+      "created_at": "2026-08-01T06:52:38.143261Z",
+      "updated_at": "2026-08-01T06:52:38.143263Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 16,
+    "fields": {
+      "name": "Urad Dhuli (1 Kg)",
+      "category": 2,
+      "description": "Premium Urad Dhuli from INDIBUZ Smart Mart",
+      "sale_price": "135",
+      "original_price": "135",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "urad-dhuli-1-kg",
+      "sort_order": 16,
+      "created_at": "2026-08-01T06:52:38.143267Z",
+      "updated_at": "2026-08-01T06:52:38.143268Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 17,
+    "fields": {
+      "name": "Urad Sabut (1 Kg)",
+      "category": 2,
+      "description": "Premium Urad Sabut from INDIBUZ Smart Mart",
+      "sale_price": "120",
+      "original_price": "120",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "urad-sabut-1-kg",
+      "sort_order": 17,
+      "created_at": "2026-08-01T06:52:38.143273Z",
+      "updated_at": "2026-08-01T06:52:38.143274Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 18,
+    "fields": {
+      "name": "Kabuli Chana (1 Kg)",
+      "category": 2,
+      "description": "Premium Kabuli Chana from INDIBUZ Smart Mart",
+      "sale_price": "80",
+      "original_price": "80",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "kabuli-chana-1-kg",
+      "sort_order": 18,
+      "created_at": "2026-08-01T06:52:38.143279Z",
+      "updated_at": "2026-08-01T06:52:38.143281Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 19,
+    "fields": {
+      "name": "Kabuli Chana Premium (1 Kg)",
+      "category": 2,
+      "description": "Premium Kabuli Chana Premium from INDIBUZ Smart Mart",
+      "sale_price": "120",
+      "original_price": "120",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "kabuli-chana-premium-1-kg",
+      "sort_order": 19,
+      "created_at": "2026-08-01T06:52:38.143285Z",
+      "updated_at": "2026-08-01T06:52:38.143287Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 20,
+    "fields": {
+      "name": "Rajma Chitra (1 Kg)",
+      "category": 2,
+      "description": "Premium Rajma Chitra from INDIBUZ Smart Mart",
+      "sale_price": "135",
+      "original_price": "135",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "rajma-chitra-1-kg",
+      "sort_order": 20,
+      "created_at": "2026-08-01T06:52:38.143291Z",
+      "updated_at": "2026-08-01T06:52:38.143293Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 21,
+    "fields": {
+      "name": "Rajma Lal (1 Kg)",
+      "category": 2,
+      "description": "Premium Rajma Lal from INDIBUZ Smart Mart",
+      "sale_price": "92",
+      "original_price": "92",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "rajma-lal-1-kg",
+      "sort_order": 21,
+      "created_at": "2026-08-01T06:52:38.143296Z",
+      "updated_at": "2026-08-01T06:52:38.143298Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 22,
+    "fields": {
+      "name": "Matar Green (1 Kg)",
+      "category": 2,
+      "description": "Premium Matar Green from INDIBUZ Smart Mart",
+      "sale_price": "60",
+      "original_price": "60",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "matar-green-1-kg",
+      "sort_order": 22,
+      "created_at": "2026-08-01T06:52:38.143302Z",
+      "updated_at": "2026-08-01T06:52:38.143303Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 23,
+    "fields": {
+      "name": "Kala Chana (1 Kg)",
+      "category": 2,
+      "description": "Premium Kala Chana from INDIBUZ Smart Mart",
+      "sale_price": "80",
+      "original_price": "80",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "kala-chana-1-kg",
+      "sort_order": 23,
+      "created_at": "2026-08-01T06:52:38.143307Z",
+      "updated_at": "2026-08-01T06:52:38.143309Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 24,
+    "fields": {
+      "name": "Besan (1 Kg)",
+      "category": 2,
+      "description": "Premium Besan from INDIBUZ Smart Mart",
+      "sale_price": "90",
+      "original_price": "90",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "besan-1-kg",
+      "sort_order": 24,
+      "created_at": "2026-08-01T06:52:38.143313Z",
+      "updated_at": "2026-08-01T06:52:38.143315Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 25,
+    "fields": {
+      "name": "Soyabari (1 Kg)",
+      "category": 2,
+      "description": "Premium Soyabari from INDIBUZ Smart Mart",
+      "sale_price": "90",
+      "original_price": "90",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "soyabari-1-kg",
+      "sort_order": 25,
+      "created_at": "2026-08-01T06:52:38.143319Z",
+      "updated_at": "2026-08-01T06:52:38.143321Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 26,
+    "fields": {
+      "name": "Raag Gold Palm Oil (Pack of 10 × 650g)",
+      "category": 3,
+      "description": "Premium Raag Gold Palm Oil from INDIBUZ Smart Mart",
+      "sale_price": "1100",
+      "original_price": "1100",
+      "weight": "Pack of 10 × 650g",
+      "is_active": true,
+      "slug": "raag-gold-palm-oil-pack-of-10-×-650g",
+      "sort_order": 26,
+      "created_at": "2026-08-01T06:52:38.143331Z",
+      "updated_at": "2026-08-01T06:52:38.143333Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 27,
+    "fields": {
+      "name": "Mahakosh Mustard Oil (850g)",
+      "category": 3,
+      "description": "Premium Mahakosh Mustard Oil from INDIBUZ Smart Mart",
+      "sale_price": "170",
+      "original_price": "170",
+      "weight": "850g",
+      "is_active": true,
+      "slug": "mahakosh-mustard-oil-850g",
+      "sort_order": 27,
+      "created_at": "2026-08-01T06:52:38.143337Z",
+      "updated_at": "2026-08-01T06:52:38.143339Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 28,
+    "fields": {
+      "name": "Kings Mustard Oil (1 Litre)",
+      "category": 3,
+      "description": "Premium Kings Mustard Oil from INDIBUZ Smart Mart",
+      "sale_price": "180",
+      "original_price": "180",
+      "weight": "1 Litre",
+      "is_active": true,
+      "slug": "kings-mustard-oil-1-litre",
+      "sort_order": 28,
+      "created_at": "2026-08-01T06:52:38.143344Z",
+      "updated_at": "2026-08-01T06:52:38.143346Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 29,
+    "fields": {
+      "name": "Kings Refined Soya Oil (750ml)",
+      "category": 3,
+      "description": "Premium Kings Refined Soya Oil from INDIBUZ Smart Mart",
+      "sale_price": "142",
+      "original_price": "142",
+      "weight": "750ml",
+      "is_active": true,
+      "slug": "kings-refined-soya-oil-750ml",
+      "sort_order": 29,
+      "created_at": "2026-08-01T06:52:38.143350Z",
+      "updated_at": "2026-08-01T06:52:38.143352Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 30,
+    "fields": {
+      "name": "Perennial Tomato Ketchup (5 Kg)",
+      "category": 4,
+      "description": "Premium Perennial Tomato Ketchup from INDIBUZ Smart Mart",
+      "sale_price": "290",
+      "original_price": "290",
+      "weight": "5 Kg",
+      "is_active": true,
+      "slug": "perennial-tomato-ketchup-5-kg",
+      "sort_order": 30,
+      "created_at": "2026-08-01T06:52:38.143359Z",
+      "updated_at": "2026-08-01T06:52:38.143360Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 31,
+    "fields": {
+      "name": "Veeba Tomato Ketchup (1.2 Kg)",
+      "category": 4,
+      "description": "Premium Veeba Tomato Ketchup from INDIBUZ Smart Mart",
+      "sale_price": "85",
+      "original_price": "85",
+      "weight": "1.2 Kg",
+      "is_active": true,
+      "slug": "veeba-tomato-ketchup-1.2-kg",
+      "sort_order": 31,
+      "created_at": "2026-08-01T06:52:38.143365Z",
+      "updated_at": "2026-08-01T06:52:38.143367Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 32,
+    "fields": {
+      "name": "Veeba Tomato Ketchup Sachets (8g)",
+      "category": 4,
+      "description": "Premium Veeba Tomato Ketchup Sachets from INDIBUZ Smart Mart",
+      "sale_price": "75",
+      "original_price": "75",
+      "weight": "8g",
+      "is_active": true,
+      "slug": "veeba-tomato-ketchup-sachets-8g",
+      "sort_order": 32,
+      "created_at": "2026-08-01T06:52:38.143372Z",
+      "updated_at": "2026-08-01T06:52:38.143374Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 33,
+    "fields": {
+      "name": "GC Soya Sauce (800g)",
+      "category": 4,
+      "description": "Premium GC Soya Sauce from INDIBUZ Smart Mart",
+      "sale_price": "48",
+      "original_price": "48",
+      "weight": "800g",
+      "is_active": true,
+      "slug": "gc-soya-sauce-800g",
+      "sort_order": 33,
+      "created_at": "2026-08-01T06:52:38.143379Z",
+      "updated_at": "2026-08-01T06:52:38.143381Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 34,
+    "fields": {
+      "name": "GC Green Chilli Sauce (700g)",
+      "category": 4,
+      "description": "Premium GC Green Chilli Sauce from INDIBUZ Smart Mart",
+      "sale_price": "50",
+      "original_price": "50",
+      "weight": "700g",
+      "is_active": true,
+      "slug": "gc-green-chilli-sauce-700g",
+      "sort_order": 34,
+      "created_at": "2026-08-01T06:52:38.143385Z",
+      "updated_at": "2026-08-01T06:52:38.143387Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 35,
+    "fields": {
+      "name": "GC Red Chilli Sauce (700g)",
+      "category": 4,
+      "description": "Premium GC Red Chilli Sauce from INDIBUZ Smart Mart",
+      "sale_price": "50",
+      "original_price": "50",
+      "weight": "700g",
+      "is_active": true,
+      "slug": "gc-red-chilli-sauce-700g",
+      "sort_order": 35,
+      "created_at": "2026-08-01T06:52:38.143391Z",
+      "updated_at": "2026-08-01T06:52:38.143393Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 36,
+    "fields": {
+      "name": "Veeba Eggless Mayonnaise Professional (1 Kg)",
+      "category": 4,
+      "description": "Premium Veeba Eggless Mayonnaise Professional from INDIBUZ Smart Mart",
+      "sale_price": "120",
+      "original_price": "120",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "veeba-eggless-mayonnaise-professional-1-kg",
+      "sort_order": 36,
+      "created_at": "2026-08-01T06:52:38.143397Z",
+      "updated_at": "2026-08-01T06:52:38.143399Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 37,
+    "fields": {
+      "name": "GC Rose-E-Khaas (500ml)",
+      "category": 4,
+      "description": "Premium GC Rose-E-Khaas from INDIBUZ Smart Mart",
+      "sale_price": "44",
+      "original_price": "44",
+      "weight": "500ml",
+      "is_active": true,
+      "slug": "gc-rose-e-khaas-500ml",
+      "sort_order": 37,
+      "created_at": "2026-08-01T06:52:38.143403Z",
+      "updated_at": "2026-08-01T06:52:38.143405Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 38,
+    "fields": {
+      "name": "GC Honey (1 Kg)",
+      "category": 4,
+      "description": "Premium GC Honey from INDIBUZ Smart Mart",
+      "sale_price": "253",
+      "original_price": "253",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "gc-honey-1-kg",
+      "sort_order": 38,
+      "created_at": "2026-08-01T06:52:38.143410Z",
+      "updated_at": "2026-08-01T06:52:38.143412Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 39,
+    "fields": {
+      "name": "GC Schezwan Sauce (1 Kg)",
+      "category": 4,
+      "description": "Premium GC Schezwan Sauce from INDIBUZ Smart Mart",
+      "sale_price": "132",
+      "original_price": "132",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "gc-schezwan-sauce-1-kg",
+      "sort_order": 39,
+      "created_at": "2026-08-01T06:52:38.143416Z",
+      "updated_at": "2026-08-01T06:52:38.143418Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 40,
+    "fields": {
+      "name": "Tooth Picks (Pack)",
+      "category": 4,
+      "description": "Premium Tooth Picks from INDIBUZ Smart Mart",
+      "sale_price": "140",
+      "original_price": "140",
+      "weight": "Pack",
+      "is_active": true,
+      "slug": "tooth-picks-pack",
+      "sort_order": 40,
+      "created_at": "2026-08-01T06:52:38.143422Z",
+      "updated_at": "2026-08-01T06:52:38.143424Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 41,
+    "fields": {
+      "name": "Frutin's Baking Powder (1 Kg)",
+      "category": 5,
+      "description": "Premium Frutin's Baking Powder from INDIBUZ Smart Mart",
+      "sale_price": "175",
+      "original_price": "175",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "frutin's-baking-powder-1-kg",
+      "sort_order": 41,
+      "created_at": "2026-08-01T06:52:38.143430Z",
+      "updated_at": "2026-08-01T06:52:38.143432Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 42,
+    "fields": {
+      "name": "Tata Agni Tea Powder (1 Kg)",
+      "category": 5,
+      "description": "Premium Tata Agni Tea Powder from INDIBUZ Smart Mart",
+      "sale_price": "195",
+      "original_price": "195",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "tata-agni-tea-powder-1-kg",
+      "sort_order": 42,
+      "created_at": "2026-08-01T06:52:38.143436Z",
+      "updated_at": "2026-08-01T06:52:38.143438Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 43,
+    "fields": {
+      "name": "WaghBakri Navchetan Leaf Tea (1 Kg)",
+      "category": 5,
+      "description": "Premium WaghBakri Navchetan Leaf Tea from INDIBUZ Smart Mart",
+      "sale_price": "210",
+      "original_price": "210",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "waghbakri-navchetan-leaf-tea-1-kg",
+      "sort_order": 43,
+      "created_at": "2026-08-01T06:52:38.143442Z",
+      "updated_at": "2026-08-01T06:52:38.143444Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 44,
+    "fields": {
+      "name": "Disposable Plastic Gloves (Pack of 100)",
+      "category": 6,
+      "description": "Premium Disposable Plastic Gloves from INDIBUZ Smart Mart",
+      "sale_price": "35",
+      "original_price": "35",
+      "weight": "Pack of 100",
+      "is_active": true,
+      "slug": "disposable-plastic-gloves-pack-of-100",
+      "sort_order": 44,
+      "created_at": "2026-08-01T06:52:38.143451Z",
+      "updated_at": "2026-08-01T06:52:38.143453Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 45,
+    "fields": {
+      "name": "Non-Woven Spring Caps White (Pack of 100)",
+      "category": 6,
+      "description": "Premium Non-Woven Spring Caps White from INDIBUZ Smart Mart",
+      "sale_price": "80",
+      "original_price": "80",
+      "weight": "Pack of 100",
+      "is_active": true,
+      "slug": "non-woven-spring-caps-white-pack-of-100",
+      "sort_order": 45,
+      "created_at": "2026-08-01T06:52:38.143457Z",
+      "updated_at": "2026-08-01T06:52:38.143459Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 46,
+    "fields": {
+      "name": "Non-Woven Spring Caps Blue (Pack of 100)",
+      "category": 6,
+      "description": "Premium Non-Woven Spring Caps Blue from INDIBUZ Smart Mart",
+      "sale_price": "90",
+      "original_price": "90",
+      "weight": "Pack of 100",
+      "is_active": true,
+      "slug": "non-woven-spring-caps-blue-pack-of-100",
+      "sort_order": 46,
+      "created_at": "2026-08-01T06:52:38.143463Z",
+      "updated_at": "2026-08-01T06:52:38.143465Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 47,
+    "fields": {
+      "name": "Premium Billing/KOT Printer Rolls (Pack of 5)",
+      "category": 6,
+      "description": "Premium Premium Billing/KOT Printer Rolls from INDIBUZ Smart Mart",
+      "sale_price": "50",
+      "original_price": "50",
+      "weight": "Pack of 5",
+      "is_active": true,
+      "slug": "premium-billing-kot-printer-rolls-pack-of-5",
+      "sort_order": 47,
+      "created_at": "2026-08-01T06:52:38.143469Z",
+      "updated_at": "2026-08-01T06:52:38.143471Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 48,
+    "fields": {
+      "name": "Eagle Chaat Masala (500g)",
+      "category": 7,
+      "description": "Premium Eagle Chaat Masala from INDIBUZ Smart Mart",
+      "sale_price": "210",
+      "original_price": "210",
+      "weight": "500g",
+      "is_active": true,
+      "slug": "eagle-chaat-masala-500g",
+      "sort_order": 48,
+      "created_at": "2026-08-01T06:52:38.143480Z",
+      "updated_at": "2026-08-01T06:52:38.143482Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 49,
+    "fields": {
+      "name": "Eagle Kashmiri Mirch Powder (500g)",
+      "category": 7,
+      "description": "Premium Eagle Kashmiri Mirch Powder from INDIBUZ Smart Mart",
+      "sale_price": "320",
+      "original_price": "320",
+      "weight": "500g",
+      "is_active": true,
+      "slug": "eagle-kashmiri-mirch-powder-500g",
+      "sort_order": 49,
+      "created_at": "2026-08-01T06:52:38.143486Z",
+      "updated_at": "2026-08-01T06:52:38.143488Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 50,
+    "fields": {
+      "name": "Eagle Red Chilli Powder (1 Kg)",
+      "category": 7,
+      "description": "Premium Eagle Red Chilli Powder from INDIBUZ Smart Mart",
+      "sale_price": "300",
+      "original_price": "300",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "eagle-red-chilli-powder-1-kg",
+      "sort_order": 50,
+      "created_at": "2026-08-01T06:52:38.143492Z",
+      "updated_at": "2026-08-01T06:52:38.143494Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 51,
+    "fields": {
+      "name": "Eastmade Chhole Masala (100g)",
+      "category": 7,
+      "description": "Premium Eastmade Chhole Masala from INDIBUZ Smart Mart",
+      "sale_price": "52",
+      "original_price": "52",
+      "weight": "100g",
+      "is_active": true,
+      "slug": "eastmade-chhole-masala-100g",
+      "sort_order": 51,
+      "created_at": "2026-08-01T06:52:38.143498Z",
+      "updated_at": "2026-08-01T06:52:38.143500Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 52,
+    "fields": {
+      "name": "Eastmade Dry Coconut Powder (1 Kg)",
+      "category": 7,
+      "description": "Premium Eastmade Dry Coconut Powder from INDIBUZ Smart Mart",
+      "sale_price": "275",
+      "original_price": "275",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "eastmade-dry-coconut-powder-1-kg",
+      "sort_order": 52,
+      "created_at": "2026-08-01T06:52:38.143504Z",
+      "updated_at": "2026-08-01T06:52:38.143506Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 53,
+    "fields": {
+      "name": "Eastmade Premium Garam Masala (100g)",
+      "category": 7,
+      "description": "Premium Eastmade Premium Garam Masala from INDIBUZ Smart Mart",
+      "sale_price": "36",
+      "original_price": "36",
+      "weight": "100g",
+      "is_active": true,
+      "slug": "eastmade-premium-garam-masala-100g",
+      "sort_order": 53,
+      "created_at": "2026-08-01T06:52:38.143510Z",
+      "updated_at": "2026-08-01T06:52:38.143512Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 54,
+    "fields": {
+      "name": "Eastmade Pumpkin Seed (1 Kg)",
+      "category": 7,
+      "description": "Premium Eastmade Pumpkin Seed from INDIBUZ Smart Mart",
+      "sale_price": "600",
+      "original_price": "600",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "eastmade-pumpkin-seed-1-kg",
+      "sort_order": 54,
+      "created_at": "2026-08-01T06:52:38.143517Z",
+      "updated_at": "2026-08-01T06:52:38.143519Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 55,
+    "fields": {
+      "name": "Eastmade Sweet Saunf (1 Kg)",
+      "category": 7,
+      "description": "Premium Eastmade Sweet Saunf from INDIBUZ Smart Mart",
+      "sale_price": "155",
+      "original_price": "155",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "eastmade-sweet-saunf-1-kg",
+      "sort_order": 55,
+      "created_at": "2026-08-01T06:52:38.143524Z",
+      "updated_at": "2026-08-01T06:52:38.143525Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 56,
+    "fields": {
+      "name": "Eastmade Sweet Saunf (200g)",
+      "category": 7,
+      "description": "Premium Eastmade Sweet Saunf from INDIBUZ Smart Mart",
+      "sale_price": "50",
+      "original_price": "50",
+      "weight": "200g",
+      "is_active": true,
+      "slug": "eastmade-sweet-saunf-200g",
+      "sort_order": 56,
+      "created_at": "2026-08-01T06:52:38.143529Z",
+      "updated_at": "2026-08-01T06:52:38.143531Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 57,
+    "fields": {
+      "name": "ES Black Pepper Powder (100g)",
+      "category": 7,
+      "description": "Premium ES Black Pepper Powder from INDIBUZ Smart Mart",
+      "sale_price": "85",
+      "original_price": "85",
+      "weight": "100g",
+      "is_active": true,
+      "slug": "es-black-pepper-powder-100g",
+      "sort_order": 57,
+      "created_at": "2026-08-01T06:52:38.143536Z",
+      "updated_at": "2026-08-01T06:52:38.143538Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 58,
+    "fields": {
+      "name": "ES Cumin Powder (100g)",
+      "category": 7,
+      "description": "Premium ES Cumin Powder from INDIBUZ Smart Mart",
+      "sale_price": "30",
+      "original_price": "30",
+      "weight": "100g",
+      "is_active": true,
+      "slug": "es-cumin-powder-100g",
+      "sort_order": 58,
+      "created_at": "2026-08-01T06:52:38.143543Z",
+      "updated_at": "2026-08-01T06:52:38.143545Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 59,
+    "fields": {
+      "name": "ES Hing Powder (100g)",
+      "category": 7,
+      "description": "Premium ES Hing Powder from INDIBUZ Smart Mart",
+      "sale_price": "80",
+      "original_price": "80",
+      "weight": "100g",
+      "is_active": true,
+      "slug": "es-hing-powder-100g",
+      "sort_order": 59,
+      "created_at": "2026-08-01T06:52:38.143549Z",
+      "updated_at": "2026-08-01T06:52:38.143551Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 60,
+    "fields": {
+      "name": "ES Red Chilli Powder (1 Kg)",
+      "category": 7,
+      "description": "Premium ES Red Chilli Powder from INDIBUZ Smart Mart",
+      "sale_price": "300",
+      "original_price": "300",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "es-red-chilli-powder-1-kg",
+      "sort_order": 60,
+      "created_at": "2026-08-01T06:52:38.143555Z",
+      "updated_at": "2026-08-01T06:52:38.143557Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 61,
+    "fields": {
+      "name": "Notlih Kashmiri/Bayadgi Chilli Whole (1 Kg)",
+      "category": 7,
+      "description": "Premium Notlih Kashmiri/Bayadgi Chilli Whole from INDIBUZ Smart Mart",
+      "sale_price": "600",
+      "original_price": "600",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "notlih-kashmiri-bayadgi-chilli-whole-1-kg",
+      "sort_order": 61,
+      "created_at": "2026-08-01T06:52:38.143561Z",
+      "updated_at": "2026-08-01T06:52:38.143563Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 62,
+    "fields": {
+      "name": "Blue Valley MSG (Ajinomoto) (500g)",
+      "category": 7,
+      "description": "Premium Blue Valley MSG (Ajinomoto) from INDIBUZ Smart Mart",
+      "sale_price": "100",
+      "original_price": "100",
+      "weight": "500g",
+      "is_active": true,
+      "slug": "blue-valley-msg-ajinomoto-500g",
+      "sort_order": 62,
+      "created_at": "2026-08-01T06:52:38.143569Z",
+      "updated_at": "2026-08-01T06:52:38.143571Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 63,
+    "fields": {
+      "name": "Chefy Chilli Flakes Sachets (Pack)",
+      "category": 7,
+      "description": "Premium Chefy Chilli Flakes Sachets from INDIBUZ Smart Mart",
+      "sale_price": "75",
+      "original_price": "75",
+      "weight": "Pack",
+      "is_active": true,
+      "slug": "chefy-chilli-flakes-sachets-pack",
+      "sort_order": 63,
+      "created_at": "2026-08-01T06:52:38.143575Z",
+      "updated_at": "2026-08-01T06:52:38.143577Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 64,
+    "fields": {
+      "name": "Nilon Mixed Pickle Sachets (Pack)",
+      "category": 7,
+      "description": "Premium Nilon Mixed Pickle Sachets from INDIBUZ Smart Mart",
+      "sale_price": "90",
+      "original_price": "90",
+      "weight": "Pack",
+      "is_active": true,
+      "slug": "nilon-mixed-pickle-sachets-pack",
+      "sort_order": 64,
+      "created_at": "2026-08-01T06:52:38.143581Z",
+      "updated_at": "2026-08-01T06:52:38.143583Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 65,
+    "fields": {
+      "name": "Nilon Mixed Pickle (4.5 Kg)",
+      "category": 7,
+      "description": "Premium Nilon Mixed Pickle from INDIBUZ Smart Mart",
+      "sale_price": "240",
+      "original_price": "240",
+      "weight": "4.5 Kg",
+      "is_active": true,
+      "slug": "nilon-mixed-pickle-4.5-kg",
+      "sort_order": 65,
+      "created_at": "2026-08-01T06:52:38.143587Z",
+      "updated_at": "2026-08-01T06:52:38.143589Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 66,
+    "fields": {
+      "name": "Nuti Vinegar (5 Kg)",
+      "category": 7,
+      "description": "Premium Nuti Vinegar from INDIBUZ Smart Mart",
+      "sale_price": "162",
+      "original_price": "162",
+      "weight": "5 Kg",
+      "is_active": true,
+      "slug": "nuti-vinegar-5-kg",
+      "sort_order": 66,
+      "created_at": "2026-08-01T06:52:38.143593Z",
+      "updated_at": "2026-08-01T06:52:38.143595Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 67,
+    "fields": {
+      "name": "Veeba Chilli Flakes Sachets (Pack)",
+      "category": 7,
+      "description": "Premium Veeba Chilli Flakes Sachets from INDIBUZ Smart Mart",
+      "sale_price": "180",
+      "original_price": "180",
+      "weight": "Pack",
+      "is_active": true,
+      "slug": "veeba-chilli-flakes-sachets-pack",
+      "sort_order": 67,
+      "created_at": "2026-08-01T06:52:38.143599Z",
+      "updated_at": "2026-08-01T06:52:38.143601Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 68,
+    "fields": {
+      "name": "Veeba Oregano Sachets (Pack)",
+      "category": 7,
+      "description": "Premium Veeba Oregano Sachets from INDIBUZ Smart Mart",
+      "sale_price": "180",
+      "original_price": "180",
+      "weight": "Pack",
+      "is_active": true,
+      "slug": "veeba-oregano-sachets-pack",
+      "sort_order": 68,
+      "created_at": "2026-08-01T06:52:38.143607Z",
+      "updated_at": "2026-08-01T06:52:38.143608Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 69,
+    "fields": {
+      "name": "Jeera (500g)",
+      "category": 8,
+      "description": "Premium Jeera from INDIBUZ Smart Mart",
+      "sale_price": "140",
+      "original_price": "140",
+      "weight": "500g",
+      "is_active": true,
+      "slug": "jeera-500g",
+      "sort_order": 69,
+      "created_at": "2026-08-01T06:52:38.143617Z",
+      "updated_at": "2026-08-01T06:52:38.143619Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 70,
+    "fields": {
+      "name": "Dhania (500g)",
+      "category": 8,
+      "description": "Premium Dhania from INDIBUZ Smart Mart",
+      "sale_price": "100",
+      "original_price": "100",
+      "weight": "500g",
+      "is_active": true,
+      "slug": "dhania-500g",
+      "sort_order": 70,
+      "created_at": "2026-08-01T06:52:38.143623Z",
+      "updated_at": "2026-08-01T06:52:38.143625Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 71,
+    "fields": {
+      "name": "Haldi (500g)",
+      "category": 8,
+      "description": "Premium Haldi from INDIBUZ Smart Mart",
+      "sale_price": "125",
+      "original_price": "125",
+      "weight": "500g",
+      "is_active": true,
+      "slug": "haldi-500g",
+      "sort_order": 71,
+      "created_at": "2026-08-01T06:52:38.143629Z",
+      "updated_at": "2026-08-01T06:52:38.143630Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 72,
+    "fields": {
+      "name": "Mirch (500g)",
+      "category": 8,
+      "description": "Premium Mirch from INDIBUZ Smart Mart",
+      "sale_price": "155",
+      "original_price": "155",
+      "weight": "500g",
+      "is_active": true,
+      "slug": "mirch-500g",
+      "sort_order": 72,
+      "created_at": "2026-08-01T06:52:38.143634Z",
+      "updated_at": "2026-08-01T06:52:38.143636Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 73,
+    "fields": {
+      "name": "Black Pepper (100g)",
+      "category": 8,
+      "description": "Premium Black Pepper from INDIBUZ Smart Mart",
+      "sale_price": "85",
+      "original_price": "85",
+      "weight": "100g",
+      "is_active": true,
+      "slug": "black-pepper-100g",
+      "sort_order": 73,
+      "created_at": "2026-08-01T06:52:38.143640Z",
+      "updated_at": "2026-08-01T06:52:38.143642Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 74,
+    "fields": {
+      "name": "Long (100g)",
+      "category": 8,
+      "description": "Premium Long from INDIBUZ Smart Mart",
+      "sale_price": "100",
+      "original_price": "100",
+      "weight": "100g",
+      "is_active": true,
+      "slug": "long-100g",
+      "sort_order": 74,
+      "created_at": "2026-08-01T06:52:38.143646Z",
+      "updated_at": "2026-08-01T06:52:38.143647Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 75,
+    "fields": {
+      "name": "Dalchini (Cassia) (100g)",
+      "category": 8,
+      "description": "Premium Dalchini (Cassia) from INDIBUZ Smart Mart",
+      "sale_price": "33",
+      "original_price": "33",
+      "weight": "100g",
+      "is_active": true,
+      "slug": "dalchini-cassia-100g",
+      "sort_order": 75,
+      "created_at": "2026-08-01T06:52:38.143654Z",
+      "updated_at": "2026-08-01T06:52:38.143656Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 76,
+    "fields": {
+      "name": "Saunf (100g)",
+      "category": 8,
+      "description": "Premium Saunf from INDIBUZ Smart Mart",
+      "sale_price": "22",
+      "original_price": "22",
+      "weight": "100g",
+      "is_active": true,
+      "slug": "saunf-100g",
+      "sort_order": 76,
+      "created_at": "2026-08-01T06:52:38.143660Z",
+      "updated_at": "2026-08-01T06:52:38.143662Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 77,
+    "fields": {
+      "name": "Black Cardamom (50g)",
+      "category": 8,
+      "description": "Premium Black Cardamom from INDIBUZ Smart Mart",
+      "sale_price": "100",
+      "original_price": "100",
+      "weight": "50g",
+      "is_active": true,
+      "slug": "black-cardamom-50g",
+      "sort_order": 77,
+      "created_at": "2026-08-01T06:52:38.143666Z",
+      "updated_at": "2026-08-01T06:52:38.143667Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 78,
+    "fields": {
+      "name": "Elaichi (50g)",
+      "category": 8,
+      "description": "Premium Elaichi from INDIBUZ Smart Mart",
+      "sale_price": "180",
+      "original_price": "180",
+      "weight": "50g",
+      "is_active": true,
+      "slug": "elaichi-50g",
+      "sort_order": 78,
+      "created_at": "2026-08-01T06:52:38.143673Z",
+      "updated_at": "2026-08-01T06:52:38.143675Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 79,
+    "fields": {
+      "name": "Methi (500g)",
+      "category": 8,
+      "description": "Premium Methi from INDIBUZ Smart Mart",
+      "sale_price": "50",
+      "original_price": "50",
+      "weight": "500g",
+      "is_active": true,
+      "slug": "methi-500g",
+      "sort_order": 79,
+      "created_at": "2026-08-01T06:52:38.143679Z",
+      "updated_at": "2026-08-01T06:52:38.143681Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 80,
+    "fields": {
+      "name": "Sarso Kali (500g)",
+      "category": 8,
+      "description": "Premium Sarso Kali from INDIBUZ Smart Mart",
+      "sale_price": "50",
+      "original_price": "50",
+      "weight": "500g",
+      "is_active": true,
+      "slug": "sarso-kali-500g",
+      "sort_order": 80,
+      "created_at": "2026-08-01T06:52:38.143685Z",
+      "updated_at": "2026-08-01T06:52:38.143687Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 81,
+    "fields": {
+      "name": "Sarso Pili (500g)",
+      "category": 8,
+      "description": "Premium Sarso Pili from INDIBUZ Smart Mart",
+      "sale_price": "50",
+      "original_price": "50",
+      "weight": "500g",
+      "is_active": true,
+      "slug": "sarso-pili-500g",
+      "sort_order": 81,
+      "created_at": "2026-08-01T06:52:38.143691Z",
+      "updated_at": "2026-08-01T06:52:38.143693Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 82,
+    "fields": {
+      "name": "Ground Nut Dana (1 Kg)",
+      "category": 8,
+      "description": "Premium Ground Nut Dana from INDIBUZ Smart Mart",
+      "sale_price": "150",
+      "original_price": "150",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "ground-nut-dana-1-kg",
+      "sort_order": 82,
+      "created_at": "2026-08-01T06:52:38.143697Z",
+      "updated_at": "2026-08-01T06:52:38.143698Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 83,
+    "fields": {
+      "name": "Makhana (250g)",
+      "category": 8,
+      "description": "Premium Makhana from INDIBUZ Smart Mart",
+      "sale_price": "150",
+      "original_price": "150",
+      "weight": "250g",
+      "is_active": true,
+      "slug": "makhana-250g",
+      "sort_order": 83,
+      "created_at": "2026-08-01T06:52:38.143703Z",
+      "updated_at": "2026-08-01T06:52:38.143704Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 84,
+    "fields": {
+      "name": "Starch (Aarut) (1 Kg)",
+      "category": 8,
+      "description": "Premium Starch (Aarut) from INDIBUZ Smart Mart",
+      "sale_price": "40",
+      "original_price": "40",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "starch-aarut-1-kg",
+      "sort_order": 84,
+      "created_at": "2026-08-01T06:52:38.143710Z",
+      "updated_at": "2026-08-01T06:52:38.143712Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 85,
+    "fields": {
+      "name": "Soyabari (1 Kg)",
+      "category": 8,
+      "description": "Premium Soyabari from INDIBUZ Smart Mart",
+      "sale_price": "105",
+      "original_price": "105",
+      "weight": "1 Kg",
+      "is_active": true,
+      "slug": "soyabari-1-kg-85",
+      "sort_order": 85,
+      "created_at": "2026-08-01T06:52:38.143717Z",
+      "updated_at": "2026-08-01T06:52:38.143719Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 86,
+    "fields": {
+      "name": "Tej Patta (100g)",
+      "category": 8,
+      "description": "Premium Tej Patta from INDIBUZ Smart Mart",
+      "sale_price": "14",
+      "original_price": "14",
+      "weight": "100g",
+      "is_active": true,
+      "slug": "tej-patta-100g",
+      "sort_order": 86,
+      "created_at": "2026-08-01T06:52:38.143723Z",
+      "updated_at": "2026-08-01T06:52:38.143724Z"
     }
   }
 ]
