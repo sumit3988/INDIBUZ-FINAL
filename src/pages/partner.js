@@ -9,8 +9,8 @@ export function renderPartner() {
     <!-- Page Hero -->
     <section class="page-hero">
       <div class="hero-bg">
-        <div class="img-placeholder" style="background-color:var(--forest-deep);" role="img" aria-label="Business partnership">
-          <div style="position:absolute;inset:0;background:linear-gradient(135deg, rgba(15,42,30,0.9) 0%, rgba(27,61,47,0.7) 50%, rgba(197,150,58,0.15) 100%);"></div>
+        <div class="img-placeholder" style="background-color:var(--red);" role="img" aria-label="Business partnership">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg, rgba(30, 30, 30,0.9) 0%, rgba(40, 40, 40,0.7) 50%, rgba(200, 16, 46,0.15) 100%);"></div>
         </div>
       </div>
       <div class="hero-overlay"></div>
@@ -84,7 +84,7 @@ export function renderPartner() {
             </div>
             <div class="product-editorial-content">
               <span class="product-card-category">Partnership</span>
-              <h3 style="font-family:var(--font-heading);font-size:var(--text-2xl);color:var(--forest-deep);margin-bottom:var(--space-lg)">Why Distributors & Importers Choose INDIBUZ</h3>
+              <h3 style="font-family:var(--font-heading);font-size:var(--text-2xl);color:var(--red);margin-bottom:var(--space-lg)">Why Distributors & Importers Choose INDIBUZ</h3>
               <div style="display:grid;gap:var(--space-md);">
                 <p style="color:var(--charcoal-muted);line-height:1.7;margin:0;">
                   <strong style="color:var(--forest);">Direct Factory Pricing</strong> — We source directly from farms and mills, eliminating middlemen to offer the most competitive FOB and CIF pricing.

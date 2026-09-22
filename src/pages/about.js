@@ -132,8 +132,8 @@ export function renderAbout() {
               <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80" alt="Ethical Sourcing" style="width:100%; height:100%; object-fit:cover; transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='none'" />
             </div>
             <div style="padding:30px;">
-              <div style="color:var(--gold); font-weight:bold; font-size:14px; margin-bottom:10px; letter-spacing:1px; text-transform:uppercase;">Step 01</div>
-              <h3 style="font-family:var(--font-heading); font-size:22px; color:var(--forest-deep); margin-bottom:15px;">Ethical Sourcing</h3>
+              <div style="color:var(--red); font-weight:bold; font-size:14px; margin-bottom:10px; letter-spacing:1px; text-transform:uppercase;">Step 01</div>
+              <h3 style="font-family:var(--font-heading); font-size:22px; color:var(--red); margin-bottom:15px;">Ethical Sourcing</h3>
               <p style="color:var(--charcoal-muted); font-size:15px; line-height:1.6;">We partner directly with farmers across India's most fertile regions to procure premium quality basmati and non-basmati rice right from the harvest.</p>
             </div>
           </div>
@@ -144,8 +144,8 @@ export function renderAbout() {
               <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Modern Processing" style="width:100%; height:100%; object-fit:cover; transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='none'" />
             </div>
             <div style="padding:30px;">
-              <div style="color:var(--gold); font-weight:bold; font-size:14px; margin-bottom:10px; letter-spacing:1px; text-transform:uppercase;">Step 02</div>
-              <h3 style="font-family:var(--font-heading); font-size:22px; color:var(--forest-deep); margin-bottom:15px;">Modern Processing</h3>
+              <div style="color:var(--red); font-weight:bold; font-size:14px; margin-bottom:10px; letter-spacing:1px; text-transform:uppercase;">Step 02</div>
+              <h3 style="font-family:var(--font-heading); font-size:22px; color:var(--red); margin-bottom:15px;">Modern Processing</h3>
               <p style="color:var(--charcoal-muted); font-size:15px; line-height:1.6;">Our state-of-the-art milling facilities ensure that every grain is sorted, cleaned, and aged to perfection while maintaining the highest hygiene standards.</p>
             </div>
           </div>
@@ -156,8 +156,8 @@ export function renderAbout() {
               <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=600&q=80" alt="Global Logistics" style="width:100%; height:100%; object-fit:cover; transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='none'" />
             </div>
             <div style="padding:30px;">
-              <div style="color:var(--gold); font-weight:bold; font-size:14px; margin-bottom:10px; letter-spacing:1px; text-transform:uppercase;">Step 03</div>
-              <h3 style="font-family:var(--font-heading); font-size:22px; color:var(--forest-deep); margin-bottom:15px;">Global Logistics</h3>
+              <div style="color:var(--red); font-weight:bold; font-size:14px; margin-bottom:10px; letter-spacing:1px; text-transform:uppercase;">Step 03</div>
+              <h3 style="font-family:var(--font-heading); font-size:22px; color:var(--red); margin-bottom:15px;">Global Logistics</h3>
               <p style="color:var(--charcoal-muted); font-size:15px; line-height:1.6;">From meticulous export packaging to seamless port handling, we ensure your bulk orders are delivered safely and efficiently anywhere in the world.</p>
             </div>
           </div>

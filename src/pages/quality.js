@@ -8,8 +8,8 @@ export function renderQuality() {
     <!-- Page Hero -->
     <section class="page-hero">
       <div class="hero-bg">
-        <div class="img-placeholder" style="background-color:var(--forest-deep);" role="img" aria-label="Quality control process">
-          <div style="position:absolute;inset:0;background:linear-gradient(135deg, rgba(15,42,30,0.9) 0%, rgba(27,61,47,0.75) 100%);"></div>
+        <div class="img-placeholder" style="background-color:var(--red);" role="img" aria-label="Quality control process">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg, rgba(30, 30, 30,0.9) 0%, rgba(40, 40, 40,0.75) 100%);"></div>
         </div>
       </div>
       <div class="hero-overlay"></div>
@@ -128,7 +128,7 @@ export function renderQuality() {
             </div>
             <div class="product-editorial-content">
               <span class="product-card-category">Technology</span>
-              <h3 style="font-family:var(--font-heading);font-size:var(--text-2xl);color:var(--forest-deep);margin-bottom:var(--space-md)">Sortex-Clean Processing</h3>
+              <h3 style="font-family:var(--font-heading);font-size:var(--text-2xl);color:var(--red);margin-bottom:var(--space-md)">Sortex-Clean Processing</h3>
               <p style="color:var(--charcoal-muted);line-height:1.7;">All our rice undergoes advanced optical sorting (Sortex) to remove discolored grains, foreign matter, and impurities. This ensures every bag that leaves our facility meets export-grade purity standards — 95 to 100% pure with nil foreign matter.</p>
             </div>
           </div>
@@ -140,7 +140,7 @@ export function renderQuality() {
             </div>
             <div class="product-editorial-content">
               <span class="product-card-category">Certification</span>
-              <h3 style="font-family:var(--font-heading);font-size:var(--text-2xl);color:var(--forest-deep);margin-bottom:var(--space-md)">Third-Party Inspection</h3>
+              <h3 style="font-family:var(--font-heading);font-size:var(--text-2xl);color:var(--red);margin-bottom:var(--space-md)">Third-Party Inspection</h3>
               <p style="color:var(--charcoal-muted);line-height:1.7;">SGS or equivalent third-party inspection is available on request. Every shipment can be accompanied by complete documentation: Commercial Invoice, Packing List, Certificate of Origin, Phytosanitary Certificate, and Fumigation Certificate.</p>
             </div>
           </div>

@@ -41,8 +41,8 @@ export function renderCertifications() {
     <!-- Page Hero -->
     <section class="page-hero">
       <div class="hero-bg">
-        <div class="img-placeholder" style="background-color:var(--forest-deep);" role="img" aria-label="Official certifications and registrations">
-          <div style="position:absolute;inset:0;background:linear-gradient(135deg, rgba(15,42,30,0.9) 0%, rgba(27,61,47,0.75) 100%);"></div>
+        <div class="img-placeholder" style="background-color:var(--red);" role="img" aria-label="Official certifications and registrations">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg, rgba(30, 30, 30,0.9) 0%, rgba(40, 40, 40,0.75) 100%);"></div>
         </div>
       </div>
       <div class="hero-overlay"></div>
@@ -75,8 +75,8 @@ export function renderCertifications() {
         </div>
 
         <!-- What These Mean -->
-        <div class="reveal" style="margin-top:var(--space-4xl);padding:var(--space-3xl);background:var(--cream);border-left:4px solid var(--gold);">
-          <h3 style="font-family:var(--font-heading);font-size:var(--text-xl);color:var(--forest-deep);margin-bottom:var(--space-md)">What This Means for Buyers</h3>
+        <div class="reveal" style="margin-top:var(--space-4xl);padding:var(--space-3xl);background:var(--cream);border-left:4px solid var(--red);">
+          <h3 style="font-family:var(--font-heading);font-size:var(--text-xl);color:var(--red);margin-bottom:var(--space-md)">What This Means for Buyers</h3>
           <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:var(--space-xl);">
             <div>
               <h4 style="font-size:var(--text-base);color:var(--forest);margin-bottom:var(--space-xs);">✓ Safe Food Production</h4>

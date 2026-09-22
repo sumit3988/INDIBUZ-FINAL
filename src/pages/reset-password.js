@@ -4,13 +4,13 @@ import { getAuthHeaders } from '../auth.js';
 export function renderResetPassword() {
     return `
     <style>
-        .auth-container { max-width: 400px; margin: 60px auto; padding: 40px; background: var(--forest-deep); border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 1px solid rgba(197, 160, 89, 0.2); }
-        .auth-title { text-align: center; color: var(--cream); margin-bottom: 24px; font-family: var(--font-heading); font-size: 28px; }
+        .auth-container { max-width: 400px; margin: 60px auto; padding: 40px; background: var(--white); border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid rgba(200, 16, 46, 0.2); }
+        .auth-title { text-align: center; color: var(--charcoal); margin-bottom: 24px; font-family: var(--font-heading); font-size: 28px; }
         .auth-form .form-group { margin-bottom: 20px; }
-        .auth-form label { display: block; margin-bottom: 8px; font-weight: 500; color: var(--cream); font-size: 14px; }
-        .auth-form input { width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 16px; color: var(--cream); transition: all 0.3s ease; }
-        .auth-form input:focus { border-color: var(--gold); outline: none; background: rgba(255,255,255,0.1); }
-        .auth-form .btn { width: 100%; text-align: center; justify-content: center; margin-top: 10px; background: var(--gold); color: var(--forest-deep); font-weight: bold; border: none; }
+        .auth-form label { display: block; margin-bottom: 8px; font-weight: 500; color: var(--charcoal); font-size: 14px; }
+        .auth-form input { width: 100%; padding: 12px; background: #fff; border: 1px solid #ccc; border-radius: 6px; font-size: 16px; color: var(--charcoal); transition: all 0.3s ease; }
+        .auth-form input:focus { border-color: var(--red); outline: none; background: rgba(255,255,255,0.1); }
+        .auth-form .btn { width: 100%; text-align: center; justify-content: center; margin-top: 10px; background: var(--red); color: var(--white); font-weight: bold; border: none; }
         .auth-form .btn:hover { background: #d4af6a; }
         .auth-msg { background: rgba(46, 125, 50, 0.1); color: #81c784; border: 1px solid rgba(46, 125, 50, 0.3); padding: 10px; border-radius: 6px; margin-bottom: 20px; display: none; font-size: 14px; text-align: center; }
         .auth-error { color: #ff8a80; background: rgba(211, 47, 47, 0.1); border: 1px solid rgba(211, 47, 47, 0.3); padding: 10px; border-radius: 6px; margin-bottom: 20px; display: none; font-size: 14px; text-align: center; }
@@ -77,7 +77,7 @@ export function initResetPassword() {
                 return result;
             })
             .then(data => {
-                msgDiv.innerHTML = `${data.message} <a href="#/login" style="color:var(--forest-deep); font-weight:bold; text-decoration:underline;">Click here to Login</a>.`;
+                msgDiv.innerHTML = `${data.message} <a href="#/login" style="color:var(--white); font-weight:bold; text-decoration:underline;">Click here to Login</a>.`;
                 msgDiv.style.display = 'block';
                 form.style.display = 'none';
             })

@@ -11,7 +11,7 @@ const regions = [
     demand: 'Basmati Rice (1121 Golden Sella, Steam), Chilli Powder',
     desc: 'The largest import market for Indian Basmati Rice. Strong demand for 1121 Golden Sella and Steam varieties for traditional Arabic cuisine.',
     color: '#C5963A',
-    accent: 'rgba(197,150,58,0.10)'
+    accent: 'rgba(200, 16, 46,0.10)'
   },
   {
     name: 'Africa',
@@ -63,8 +63,8 @@ export function renderMarkets() {
     <!-- Page Hero -->
     <section class="page-hero">
       <div class="hero-bg">
-        <div class="img-placeholder" style="background-color:var(--forest-deep);" role="img" aria-label="Global export map">
-          <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,42,30,0.95) 0%,rgba(27,61,47,0.75) 50%,rgba(197,150,58,0.2) 100%);"></div>
+        <div class="img-placeholder" style="background-color:var(--red);" role="img" aria-label="Global export map">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30, 30, 30,0.95) 0%,rgba(40, 40, 40,0.75) 50%,rgba(200, 16, 46,0.2) 100%);"></div>
           <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.05;" xmlns="http://www.w3.org/2000/svg">
             <defs><pattern id="dotgrid" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.8" fill="#fff"/></pattern></defs>
             <rect width="100%" height="100%" fill="url(#dotgrid)"/>
@@ -79,12 +79,12 @@ export function renderMarkets() {
     </section>
 
     <!-- Export Stats Bar -->
-    <section style="background:var(--forest-deep); padding:36px 0; border-bottom:3px solid rgba(197,150,58,0.4);">
+    <section style="background:var(--red); padding:36px 0; border-bottom:3px solid rgba(200, 16, 46,0.4);">
       <div class="container">
         <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; text-align:center;">
           ${stats.map((s, i) => `
             <div style="padding:20px 16px; ${i < stats.length - 1 ? 'border-right:1px solid rgba(255,255,255,0.1);' : ''}">
-              <div style="font-family:var(--font-heading); font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:800; color:var(--gold); line-height:1; margin-bottom:8px;">${s.value}</div>
+              <div style="font-family:var(--font-heading); font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:800; color:var(--red); line-height:1; margin-bottom:8px;">${s.value}</div>
               <div style="font-size:var(--text-sm); color:rgba(255,255,255,0.65); letter-spacing:0.5px;">${s.label}</div>
             </div>
           `).join('')}
@@ -106,15 +106,15 @@ export function renderMarkets() {
 
         <!-- Premium Map Card -->
         <div class="world-map-container reveal" style="margin-top:var(--space-2xl);">
-          <div style="border-radius:24px; overflow:hidden; box-shadow:0 24px 80px rgba(0,0,0,0.14); border:3px solid rgba(197,150,58,0.35); position:relative;">
+          <div style="border-radius:24px; overflow:hidden; box-shadow:0 24px 80px rgba(0,0,0,0.14); border:3px solid rgba(200, 16, 46,0.35); position:relative;">
             <!-- Header bar overlay -->
-            <div style="position:absolute; top:0; left:0; right:0; z-index:10; background:linear-gradient(to bottom,rgba(15,42,30,0.88) 0%,transparent 100%); padding:18px 24px; pointer-events:none; display:flex; align-items:center; justify-content:space-between;">
+            <div style="position:absolute; top:0; left:0; right:0; z-index:10; background:linear-gradient(to bottom,rgba(30, 30, 30,0.88) 0%,transparent 100%); padding:18px 24px; pointer-events:none; display:flex; align-items:center; justify-content:space-between;">
               <div style="display:flex; align-items:center; gap:10px;">
-                <span style="width:10px;height:10px;border-radius:50%;background:var(--gold);display:inline-block;animation:pulse 2s ease-in-out infinite;box-shadow:0 0 0 4px rgba(197,150,58,0.25);"></span>
+                <span style="width:10px;height:10px;border-radius:50%;background:var(--red);display:inline-block;animation:pulse 2s ease-in-out infinite;box-shadow:0 0 0 4px rgba(200, 16, 46,0.25);"></span>
                 <span style="color:#fff; font-weight:700; font-size:14px; letter-spacing:0.6px;">INDIBUZ — Punjab, India</span>
                 <span style="color:rgba(255,255,255,0.55); font-size:12px;">· Export Hub</span>
               </div>
-              <div style="background:rgba(197,150,58,0.2); border:1px solid rgba(197,150,58,0.4); border-radius:20px; padding:4px 12px; font-size:11px; color:var(--gold); font-weight:600;">🟢 LIVE</div>
+              <div style="background:rgba(200, 16, 46,0.2); border:1px solid rgba(200, 16, 46,0.4); border-radius:20px; padding:4px 12px; font-size:11px; color:var(--red); font-weight:600;">🟢 LIVE</div>
             </div>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d874777.6!2d74.8!3d30.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a87e3c8ef2d75%3A0xaabb3810d42ab5f4!2sPunjab%2C%20India!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
@@ -131,24 +131,24 @@ export function renderMarkets() {
           <!-- Info strips below map -->
           <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:20px;">
             <div style="background:#fff; border-radius:14px; padding:18px 20px; border:1px solid rgba(0,0,0,0.07); display:flex; align-items:center; gap:14px; box-shadow:0 4px 20px rgba(0,0,0,0.05); transition:transform 0.2s;" onmouseenter="this.style.transform='translateY(-3px)'" onmouseleave="this.style.transform='translateY(0)'">
-              <div style="width:44px;height:44px;border-radius:10px;background:rgba(15,42,30,0.08);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">📍</div>
+              <div style="width:44px;height:44px;border-radius:10px;background:rgba(30, 30, 30,0.08);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">📍</div>
               <div>
                 <div style="font-size:11px; color:var(--charcoal-muted); margin-bottom:3px; text-transform:uppercase; letter-spacing:0.5px;">Location</div>
-                <div style="font-weight:700; font-size:14px; color:var(--forest-deep);">Punjab, India</div>
+                <div style="font-weight:700; font-size:14px; color:var(--red);">Punjab, India</div>
               </div>
             </div>
             <div style="background:#fff; border-radius:14px; padding:18px 20px; border:1px solid rgba(0,0,0,0.07); display:flex; align-items:center; gap:14px; box-shadow:0 4px 20px rgba(0,0,0,0.05); transition:transform 0.2s;" onmouseenter="this.style.transform='translateY(-3px)'" onmouseleave="this.style.transform='translateY(0)'">
               <div style="width:44px;height:44px;border-radius:10px;background:rgba(37,211,102,0.1);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">📞</div>
               <div>
                 <div style="font-size:11px; color:var(--charcoal-muted); margin-bottom:3px; text-transform:uppercase; letter-spacing:0.5px;">WhatsApp / Call</div>
-                <div style="font-weight:700; font-size:14px; color:var(--forest-deep);">+91 6284302338</div>
+                <div style="font-weight:700; font-size:14px; color:var(--red);">+91 6284302338</div>
               </div>
             </div>
             <div style="background:#fff; border-radius:14px; padding:18px 20px; border:1px solid rgba(0,0,0,0.07); display:flex; align-items:center; gap:14px; box-shadow:0 4px 20px rgba(0,0,0,0.05); transition:transform 0.2s;" onmouseenter="this.style.transform='translateY(-3px)'" onmouseleave="this.style.transform='translateY(0)'">
-              <div style="width:44px;height:44px;border-radius:10px;background:rgba(197,150,58,0.12);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">✈️</div>
+              <div style="width:44px;height:44px;border-radius:10px;background:rgba(200, 16, 46,0.12);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">✈️</div>
               <div>
                 <div style="font-size:11px; color:var(--charcoal-muted); margin-bottom:3px; text-transform:uppercase; letter-spacing:0.5px;">Export Reach</div>
-                <div style="font-weight:700; font-size:14px; color:var(--forest-deep);">25+ Countries</div>
+                <div style="font-weight:700; font-size:14px; color:var(--red);">25+ Countries</div>
               </div>
             </div>
           </div>

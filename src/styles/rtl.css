@@ -93,7 +93,7 @@
 [dir="rtl"] .process-step::after {
   right: auto;
   left: calc(-1 * var(--space-xl));
-  background: linear-gradient(to left, var(--gold), transparent);
+  background: linear-gradient(to left, var(--red), transparent);
 }
 
 /* Contact details */

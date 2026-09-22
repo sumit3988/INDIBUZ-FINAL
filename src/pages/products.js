@@ -21,83 +21,90 @@ function renderSkeletonCards() {
 function renderProductCard(product) {
   const specs = [];
   
-  if (product.grain_length) specs.push({ label: t('products.grainLength') || 'Grain Length', value: product.grain_length });
-  if (product.moisture_max) specs.push({ label: t('products.moisture') || 'Moisture', value: product.moisture_max });
-  if (product.broken_percent) specs.push({ label: t('products.broken') || 'Broken', value: product.broken_percent });
-  if (product.packaging_options) specs.push({ label: t('products.packaging') || 'Packaging', value: product.packaging_options });
+  // Try to use unit/pack size
+  const packSize = product.unit || (product.packaging_options ? product.packaging_options.split(',')[0] : '1 Pack');
   
-  const origPrice = product.original_price ? parseFloat(product.original_price) : null;
-  const salePrice = product.sale_price ? parseFloat(product.sale_price) : null;
-  const discountPercent = product.discount_percent || 0;
+  const origPrice = product.original_price ? parseFloat(product.original_price) : (product.mrp ? parseFloat(product.mrp) : null);
+  const salePrice = product.sale_price ? parseFloat(product.sale_price) : (product.price ? parseFloat(product.price) : null);
+  
+  // Calculate discount if old price exists and > sale price
+  let discountPercent = 0;
+  if (origPrice && salePrice && origPrice > salePrice) {
+    discountPercent = Math.round((1 - (salePrice / origPrice)) * 100);
+  }
 
   const priceHTML = (salePrice || origPrice) ? `
-    <div class="product-card-pricing" style="margin-top:12px; margin-bottom:12px; display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
-      ${salePrice ? `<span style="font-size:var(--text-xl); font-weight:700; color:var(--forest-deep);">₹${salePrice.toLocaleString('en-IN')}</span>` : ''}
-      ${origPrice && origPrice > salePrice ? `<span style="font-size:var(--text-sm); color:var(--charcoal-muted); text-decoration:line-through;">₹${origPrice.toLocaleString('en-IN')}</span>` : ''}
-      ${discountPercent > 0 ? `<span style="background:var(--burgundy); color:#fff; font-size:11px; font-weight:700; padding:3px 10px; border-radius:12px; letter-spacing:0.05em;">${discountPercent}% OFF</span>` : ''}
+    <div class="product-card-pricing" style="margin-top:10px; margin-bottom:12px; display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;">
+      ${salePrice ? `<span style="font-size:1.4rem; font-weight:800; color:var(--charcoal);">₹${salePrice.toLocaleString('en-IN')}</span>` : ''}
+      ${origPrice && origPrice > salePrice ? `<span style="font-size:1rem; color:var(--charcoal-muted); text-decoration:line-through;">₹${origPrice.toLocaleString('en-IN')}</span>` : ''}
     </div>
   ` : '';
 
   let stockBadge = '';
-  if (product.stock_status_customer === 'Out of Stock') {
-    stockBadge = `<span style="color:#d32f2f; background:#ffebee; padding:4px 8px; border-radius:4px; font-size:12px; font-weight:bold;">Out of Stock</span>`;
-  } else if (product.stock_status_customer === 'Low Stock') {
-    stockBadge = `<span style="color:#e65100; background:#fff3e0; padding:4px 8px; border-radius:4px; font-size:12px; font-weight:bold;">Low Stock</span>`;
+  if (product.availability === 'Out of Stock') {
+    stockBadge = `<span style="color:#d32f2f; font-size:12px; font-weight:bold;">Out of Stock</span>`;
   } else {
-    stockBadge = `<span style="color:#2e7d32; background:#e8f5e9; padding:4px 8px; border-radius:4px; font-size:12px; font-weight:bold;">In Stock</span>`;
+    stockBadge = `<span style="color:var(--success); font-size:12px; font-weight:bold;">In Stock</span>`;
+  }
+
+  // Use the ID to track cart
+  const prodId = product.id || product.name.toLowerCase().replace(/[^a-z0-9]/g, '-');
+  const cartItem = getCart().find(item => String(item.id) === String(prodId));
+
+  // Determine Add to cart vs Qty Selector
+  let cartActions = '';
+  if (product.availability === 'Out of Stock') {
+     cartActions = `<button class="btn btn-sm" disabled style="opacity:0.5; width:100%; background:var(--charcoal-muted); color:white; font-weight:600; border-radius:6px; padding:10px;">Out of Stock</button>`;
+  } else if (cartItem) {
+     cartActions = `
+       <div style="display:flex; align-items:center; justify-content:space-between; background:var(--white); border-radius:6px; border:2px solid var(--red); padding:4px;">
+         <button class="qty-btn" data-id="${cartItem.id}" data-action="decrease" style="background:#fff; border:none; width:32px; height:32px; border-radius:4px; cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center; color:var(--red); font-weight:bold;">-</button>
+         <span style="font-weight:bold; font-size:16px; color:var(--charcoal);">${cartItem.quantity}</span>
+         <button class="qty-btn" data-id="${cartItem.id}" data-action="increase" style="background:#fff; border:none; width:32px; height:32px; border-radius:4px; cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center; color:var(--red); font-weight:bold;">+</button>
+       </div>
+     `;
+  } else {
+     cartActions = `<button class="btn btn-sm add-to-cart-btn" data-product='${encodeURIComponent(JSON.stringify(product))}' style="width:100%; background:white; color:var(--red); border:2px solid var(--red); font-weight:700; border-radius:6px; padding:8px; transition:all 0.2s;" onmouseover="this.style.background='var(--red)'; this.style.color='white';" onmouseout="this.style.background='white'; this.style.color='var(--red)';">Add to Cart</button>`;
   }
 
   return `
-    <article class="product-card reveal hidden-reveal">
-      <div class="product-card-image" style="position:relative;">
+    <article class="product-card reveal hidden-reveal" style="background: white; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 20px; position: relative; transition: all 0.3s; display:flex; flex-direction:column; height: 100%;" onmouseover="this.style.boxShadow='0 12px 30px rgba(0,0,0,0.08)'; this.style.transform='translateY(-4px)';" onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';">
+      <div class="product-card-image" style="position:relative; margin-bottom:16px;">
         ${discountPercent > 0 ? `
-          <div style="position:absolute; top:12px; right:12px; background:var(--burgundy); color:#fff; font-size:12px; font-weight:700; padding:4px 10px; border-radius:4px; z-index:2; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
-            ${discountPercent}% OFF
+          <div style="position:absolute; top:10px; left:10px; background:var(--red); color:#fff; font-size:12px; font-weight:800; padding:4px 8px; border-radius:4px; z-index:2; box-shadow:0 2px 6px rgba(200,16,46,0.3);">
+            -${discountPercent}%
           </div>
         ` : ''}
-        ${product.image_url ? `
-          <img src="${product.image_url}" alt="${product.name}" loading="lazy" style="width:100%; height:100%; object-fit:cover;" />
-        ` : `
-          <div class="img-placeholder" style="background-color:var(--forest-deep);" role="img" aria-label="${product.name}"></div>
-        `}
-      </div>
-      <div class="product-card-body">
-        <span class="product-card-category" style="display:flex; justify-content:space-between;">
-            <span>${product.category_name || 'General'}</span>
-            ${stockBadge}
-        </span>
-        <h3 class="product-card-title">${product.name}</h3>
-        ${priceHTML}
-        <p style="font-size:var(--text-sm);color:var(--charcoal-muted);line-height:1.6;margin-bottom:var(--space-md)">${product.description || ''}</p>
-        <div class="product-card-specs">
-          ${specs.map(s => `
-            <div class="product-spec">
-              <span class="product-spec-label">${s.label}</span>
-              <span class="product-spec-value">${s.value}</span>
-            </div>
-          `).join('')}
+        <button style="position:absolute; top:10px; right:10px; background:rgba(255,255,255,0.9); border:none; border-radius:50%; width:32px; height:32px; display:flex; align-items:center; justify-content:center; z-index:2; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.1);" title="Quick View">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--charcoal)" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        </button>
+        <div style="width: 100%; aspect-ratio: 1; background: var(--cream); border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow:hidden;">
+          ${product.image_url ? `
+            <img src="${product.image_url}" alt="${product.name}" loading="lazy" style="width:100%; height:100%; object-fit:cover;" />
+          ` : `
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3" color="var(--charcoal-light)"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          `}
         </div>
       </div>
-      <div class="product-card-footer" style="display:flex; flex-direction:column; gap:8px;">
-        ${(function() {
-          const cartItems = getCart();
-          const prodId = product.id || product.name.toLowerCase().replace(/[^a-z0-9]/g, '-');
-          const cartItem = cartItems.find(item => String(item.id) === String(prodId));
-          
-          if (product.stock_status_customer === 'Out of Stock') {
-             return `<button class="btn btn-primary btn-sm" disabled style="opacity:0.5; width:100%; justify-content:center; background:var(--forest-deep); font-weight:600;">Out of Stock</button>`;
-          } else if (cartItem) {
-             return `
-               <div style="display:flex; align-items:center; justify-content:space-between; background:var(--cream); border-radius:4px; border:1px solid #ddd; padding:4px;">
-                 <button class="qty-btn" data-id="${cartItem.id}" data-action="decrease" style="background:#fff; border:none; width:32px; height:32px; border-radius:4px; cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center; box-shadow:0 1px 3px rgba(0,0,0,0.1);">-</button>
-                 <span style="font-weight:bold; font-size:16px;">${cartItem.quantity}</span>
-                 <button class="qty-btn" data-id="${cartItem.id}" data-action="increase" style="background:#fff; border:none; width:32px; height:32px; border-radius:4px; cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center; box-shadow:0 1px 3px rgba(0,0,0,0.1);">+</button>
-               </div>
-             `;
-          } else {
-             return `<button class="btn btn-primary btn-sm add-to-cart-btn" data-product='${encodeURIComponent(JSON.stringify(product))}' style="width:100%; justify-content:center; background:var(--forest-deep); font-weight:600;">Add to Cart 🛒</button>`;
-          }
-        })()}
+      <div class="product-card-body" style="flex:1; display:flex; flex-direction:column;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <span style="font-size:12px; color:var(--charcoal-muted); font-weight:600; text-transform:uppercase;">${product.category_name || product.category || 'Grocery'}</span>
+            ${stockBadge}
+        </div>
+        <h3 class="product-card-title" style="font-size:1.1rem; font-weight:700; color:var(--charcoal); margin-bottom:8px; line-height:1.3; overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;">${product.name}</h3>
+        <div style="font-size:13px; color:var(--charcoal-muted); background:var(--ivory); display:inline-block; padding:2px 8px; border-radius:4px; margin-bottom:8px; align-self:flex-start; border:1px solid rgba(0,0,0,0.05);">Pack Size: ${packSize}</div>
+        
+        <div style="flex:1;"></div> <!-- Spacer to push pricing and buttons to bottom -->
+        
+        ${priceHTML}
+        
+      </div>
+      <div class="product-card-footer" style="display:flex; flex-direction:column; gap:8px; margin-top:12px;">
+        ${cartActions}
+        <div style="display:flex; gap:8px;">
+            <a href="#/cart" class="buy-now-btn" style="flex:1; text-align:center; background:var(--red); color:var(--charcoal); border:none; padding:8px; border-radius:6px; font-weight:700; font-size:14px; text-decoration:none; cursor:pointer; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.9';" onmouseout="this.style.opacity='1';">Buy Now</a>
+            <a href="https://wa.me/916284302338?text=I%20would%20like%20to%20order:%20${encodeURIComponent(product.name)}" target="_blank" style="flex:1; text-align:center; background:#25D366; color:white; border:none; padding:8px; border-radius:6px; font-weight:700; font-size:14px; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:4px; cursor:pointer; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.9';" onmouseout="this.style.opacity='1';"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg> Order</a>
+        </div>
       </div>
     </article>
   `;
@@ -116,33 +123,41 @@ export function renderProducts() {
       }
       .sidebar { padding: 24px; background: var(--cream); border-radius: 12px; }
       .search-box { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px; margin-bottom: 20px; }
-      .filter-title { font-weight: bold; margin-bottom: 12px; font-size: 18px; color: var(--forest-deep); border-bottom: 2px solid var(--gold); padding-bottom: 8px; }
+      .filter-title { font-weight: 800; margin-bottom: 15px; font-size: 18px; color: var(--charcoal); border-bottom: 2px solid var(--red); padding-bottom: 10px; }
       .filter-list { list-style: none; padding: 0; margin: 0; }
-      .filter-list li { margin-bottom: 10px; cursor: pointer; color: var(--charcoal); }
-      .filter-list li:hover { color: var(--forest-deep); font-weight: 600; }
-      .filter-list li.active { color: var(--forest-deep); font-weight: bold; text-decoration: underline; }
+      .filter-list li { margin-bottom: 12px; cursor: pointer; color: var(--charcoal-muted); font-size: 15px; transition: all 0.2s; }
+      .filter-list li:hover { color: var(--red); font-weight: 600; padding-left: 5px; }
+      .filter-list li.active { color: var(--red); font-weight: bold; }
+      .products-layout { display: grid; grid-template-columns: 260px 1fr; gap: 40px; align-items: start; }
+      .mobile-filter-btn { display: none; width: 100%; padding: 14px; background: var(--white); color: var(--charcoal); border: 1px solid var(--red); border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; align-items: center; justify-content: center; gap: 8px; transition: all 0.3s; margin-bottom: 20px;}
+      .mobile-filter-btn:hover { background: var(--red); color: white; }
+      @media (max-width: 991px) {
+        .products-layout { grid-template-columns: 1fr; gap: 24px; }
+        .sidebar { display: none; margin-top: 20px; }
+        .sidebar.show { display: block; }
+        .mobile-filter-btn { display: flex; }
+      }
     </style>
-    <!-- Page Hero -->
-    <section class="page-hero">
-      <div class="hero-bg">
-        <div class="img-placeholder" style="background-color:var(--forest-deep);" role="img" aria-label="Premium rice and spice products">
-          <div style="position:absolute;inset:0;background:linear-gradient(135deg, rgba(15,42,30,0.95) 0%, rgba(27,61,47,0.8) 60%, rgba(107,29,42,0.3) 100%);"></div>
-        </div>
-      </div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <h1 class="hero-title reveal">Our Products</h1>
-        <p class="hero-subtitle reveal">Browse our premium export-quality products</p>
+    <!-- Page Hero - Now Smart Mart Minimal -->
+    <section class="page-hero" style="min-height: 200px; padding-top: calc(var(--header-height) + 40px); background: var(--ivory); padding-bottom: 20px;">
+      <div class="container">
+        <h1 class="hero-title reveal" style="color: var(--charcoal); font-size: 2.5rem; margin-bottom: 10px;">Wholesale Products</h1>
+        <p class="hero-subtitle reveal" style="color: var(--charcoal-muted); margin: 0; max-width: none;">Browse our extensive catalogue of premium wholesale goods.</p>
       </div>
     </section>
 
     <!-- Products Content -->
     <section class="products-page section">
-      <div class="container" style="display:grid; grid-template-columns: 280px 1fr; gap: 40px; align-items: start;">
+      <div class="container products-layout">
         
         <!-- Sidebar Filters -->
-        <aside class="sidebar">
-            <input type="text" id="search-input" class="search-box" placeholder="Search products..." autocomplete="off">
+        <div>
+          <button id="mobile-filter-toggle" class="mobile-filter-btn">
+             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+             Search & Filter
+          </button>
+          <aside class="sidebar" id="products-sidebar">
+              <input type="text" id="search-input" class="search-box" placeholder="Search products..." autocomplete="off">
             <div id="autocomplete-suggestions" style="position:absolute; background:#fff; border:1px solid #ccc; width:230px; display:none; z-index:10; border-radius:4px; max-height:200px; overflow-y:auto; box-shadow:0 4px 6px rgba(0,0,0,0.1);"></div>
             
             <h3 class="filter-title">Categories</h3>
@@ -154,7 +169,8 @@ export function renderProducts() {
             <ul class="filter-list" id="brand-filter-list">
                 <li data-val="" class="active">All Brands</li>
             </ul>
-        </aside>
+          </aside>
+        </div>
 
         <!-- Product Grid -->
         <div id="products-content">
@@ -175,6 +191,14 @@ export function initProductTabs() {
   const grid = document.getElementById('main-products-grid');
   const searchInput = document.getElementById('search-input');
   const suggestionsBox = document.getElementById('autocomplete-suggestions');
+  
+  const filterToggle = document.getElementById('mobile-filter-toggle');
+  const sidebar = document.getElementById('products-sidebar');
+  if (filterToggle && sidebar) {
+      filterToggle.addEventListener('click', () => {
+          sidebar.classList.toggle('show');
+      });
+  }
   
   let currentCategory = '';
   let currentBrand = '';

@@ -27,13 +27,13 @@ export function renderCart() {
 
       <section class="section" style="min-height:400px; display:flex; align-items:center; justify-content:center;">
         <div class="container" style="text-align:center; max-width:550px;">
-          <div style="width:80px; height:80px; margin:0 auto var(--space-lg); background:var(--cream); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--forest-deep);">
+          <div style="width:80px; height:80px; margin:0 auto var(--space-lg); background:var(--cream); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--red);">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
               <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
             </svg>
           </div>
-          <h2 style="font-family:var(--font-heading); font-size:var(--text-3xl); color:var(--forest-deep); margin-bottom:var(--space-md);">Your Cart is Currently Empty</h2>
+          <h2 style="font-family:var(--font-heading); font-size:var(--text-3xl); color:var(--red); margin-bottom:var(--space-md);">Your Cart is Currently Empty</h2>
           <p style="color:var(--charcoal-muted); line-height:1.6; margin-bottom:var(--space-xl);">Browse our export-quality Basmati Rice, Non-Basmati Rice, Atta, and Spices, and add your required items to build a custom bulk order quote.</p>
           <a href="#/products" class="btn btn-primary btn-lg">Explore Our Products →</a>
         </div>
@@ -45,7 +45,7 @@ export function renderCart() {
     const lineTotal = item.price > 0 ? item.price * item.quantity : 0;
     return `
       <div class="cart-item" data-id="${item.id}" style="display:flex; gap:20px; padding:20px; background:var(--white); border-radius:12px; border:1px solid rgba(0,0,0,0.08); align-items:center; flex-wrap:wrap;">
-        <div style="width:70px; height:70px; border-radius:8px; overflow:hidden; background:var(--forest-deep); flex-shrink:0; display:flex; align-items:center; justify-content:center;">
+        <div style="width:70px; height:70px; border-radius:8px; overflow:hidden; background:var(--red); flex-shrink:0; display:flex; align-items:center; justify-content:center;">
           ${item.image_url ? `
             <img src="${item.image_url}" alt="${item.name}" style="width:100%; height:100%; object-fit:cover;" />
           ` : `
@@ -53,16 +53,16 @@ export function renderCart() {
           `}
         </div>
         <div style="flex:1; min-width:200px;">
-          <h4 style="font-family:var(--font-heading); font-size:var(--text-lg); color:var(--forest-deep); margin-bottom:4px;">${item.name}</h4>
+          <h4 style="font-family:var(--font-heading); font-size:var(--text-lg); color:var(--red); margin-bottom:4px;">${item.name}</h4>
           <p style="font-size:var(--text-xs); color:var(--charcoal-muted); margin:0;">${item.variant ? item.variant : ''} ${item.packaging ? `• ${item.packaging}` : ''}</p>
           <div style="margin-top:6px;">
             ${item.price > 0 ? `
-              <span style="font-weight:700; color:var(--forest-deep); font-size:var(--text-md);">₹${item.price.toLocaleString('en-IN')}</span>
+              <span style="font-weight:700; color:var(--red); font-size:var(--text-md);">₹${item.price.toLocaleString('en-IN')}</span>
               ${item.original_price && item.original_price > item.price ? `
                 <span style="font-size:var(--text-xs); color:var(--charcoal-muted); text-decoration:line-through; margin-left:6px;">₹${item.original_price.toLocaleString('en-IN')}</span>
               ` : ''}
             ` : `
-              <span style="font-size:var(--text-xs); color:var(--gold); font-weight:600;">Bulk Pricing / Quote Required</span>
+              <span style="font-size:var(--text-xs); color:var(--red); font-weight:600;">Bulk Pricing / Quote Required</span>
             `}
           </div>
         </div>
@@ -77,7 +77,7 @@ export function renderCart() {
         <!-- Line Total -->
         <div style="min-width:100px; text-align:right;">
           ${lineTotal > 0 ? `
-            <span style="font-weight:700; color:var(--forest-deep); font-size:var(--text-lg);">₹${lineTotal.toLocaleString('en-IN')}</span>
+            <span style="font-weight:700; color:var(--red); font-size:var(--text-lg);">₹${lineTotal.toLocaleString('en-IN')}</span>
           ` : `
             <span style="font-size:var(--text-xs); color:var(--charcoal-muted);">Custom Quote</span>
           `}
@@ -111,7 +111,7 @@ export function renderCart() {
           <!-- Items List Column -->
           <div>
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:var(--space-lg);">
-              <h2 style="font-family:var(--font-heading); font-size:var(--text-2xl); color:var(--forest-deep); margin:0;">Selected Order Items (${items.length})</h2>
+              <h2 style="font-family:var(--font-heading); font-size:var(--text-2xl); color:var(--red); margin:0;">Selected Order Items (${items.length})</h2>
               <button id="clear-cart-btn" style="background:none; border:none; color:#c62828; cursor:pointer; font-size:var(--text-xs); font-weight:600; text-decoration:underline;">Clear Cart</button>
             </div>
             
@@ -120,18 +120,18 @@ export function renderCart() {
             </div>
 
             <div style="margin-top:var(--space-xl); display:flex; justify-content:space-between; align-items:center;">
-              <a href="#/products" style="color:var(--forest-deep); font-weight:600; font-size:var(--text-sm); text-decoration:none;">← Add More Products</a>
+              <a href="#/products" style="color:var(--red); font-weight:600; font-size:var(--text-sm); text-decoration:none;">← Add More Products</a>
             </div>
           </div>
 
           <!-- Checkout & Summary Column -->
           <div style="background:var(--cream); padding:28px; border-radius:16px; border:1px solid rgba(0,0,0,0.06); position:sticky; top:100px;">
-            <h3 style="font-family:var(--font-heading); font-size:var(--text-xl); color:var(--forest-deep); margin-bottom:var(--space-lg); border-bottom:2px solid var(--gold); padding-bottom:10px;">Order Summary</h3>
+            <h3 style="font-family:var(--font-heading); font-size:var(--text-xl); color:var(--red); margin-bottom:var(--space-lg); border-bottom:2px solid var(--red); padding-bottom:10px;">Order Summary</h3>
             
             <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:var(--space-lg); font-size:var(--text-sm);">
               <div style="display:flex; justify-content:space-between;">
                 <span style="color:var(--charcoal-muted);">Items Subtotal:</span>
-                <span style="font-weight:700; color:var(--forest-deep);">₹${subtotal.toLocaleString('en-IN')}</span>
+                <span style="font-weight:700; color:var(--red);">₹${subtotal.toLocaleString('en-IN')}</span>
               </div>
               ${savings > 0 ? `
                 <div style="display:flex; justify-content:space-between; color:#2e7d32;">
@@ -140,15 +140,15 @@ export function renderCart() {
                 </div>
               ` : ''}
               <div style="display:flex; justify-content:space-between; font-size:var(--text-base); border-top:1px dashed #ccc; padding-top:12px; margin-top:4px;">
-                <strong style="color:var(--forest-deep);">Estimated Total:</strong>
-                <strong style="font-size:var(--text-xl); color:var(--forest-deep);">₹${subtotal.toLocaleString('en-IN')}</strong>
+                <strong style="color:var(--red);">Estimated Total:</strong>
+                <strong style="font-size:var(--text-xl); color:var(--red);">₹${subtotal.toLocaleString('en-IN')}</strong>
               </div>
               <p style="font-size:11px; color:var(--charcoal-muted); margin:0;">* Final shipping, freight, and bulk volume discounts will be calculated in quote.</p>
             </div>
 
             <!-- Customer Checkout Form -->
             <form id="cart-order-form" style="display:flex; flex-direction:column; gap:14px; margin-top:var(--space-lg);">
-              <h4 style="font-family:var(--font-heading); font-size:var(--text-md); color:var(--forest-deep); margin:0;">Your Contact Details</h4>
+              <h4 style="font-family:var(--font-heading); font-size:var(--text-md); color:var(--red); margin:0;">Your Contact Details</h4>
               <div>
                 <input type="text" name="name" placeholder="Full Name *" required class="form-input" style="width:100%; padding:10px 14px; border-radius:6px; border:1px solid #ccc; font-size:14px;" />
               </div>
@@ -167,20 +167,20 @@ export function renderCart() {
 
               <!-- Payment Method Selection -->
               <div style="margin-top:8px;">
-                <h4 style="font-family:var(--font-heading); font-size:var(--text-md); color:var(--forest-deep); margin:0 0 10px 0;">Select Payment Method</h4>
+                <h4 style="font-family:var(--font-heading); font-size:var(--text-md); color:var(--red); margin:0 0 10px 0;">Select Payment Method</h4>
                 <div style="display:flex; flex-direction:column; gap:8px;">
 
                   <!-- Bank Transfer -->
                   <label id="pay-label-bank" style="display:flex; align-items:center; gap:10px; padding:12px 14px; border-radius:8px; border:2px solid #ddd; cursor:pointer; background:#fff; transition:all 0.2s;" onclick="selectPayment('bank')">
-                    <input type="radio" name="payment_method" value="bank_transfer" id="pay-bank" style="width:16px;height:16px;accent-color:var(--forest-deep);" />
+                    <input type="radio" name="payment_method" value="bank_transfer" id="pay-bank" style="width:16px;height:16px;accent-color:var(--red);" />
                     <span style="font-size:22px;">🏦</span>
                     <div>
-                      <div style="font-weight:600; font-size:13px; color:var(--forest-deep);">Bank Transfer (NEFT / RTGS / SWIFT)</div>
+                      <div style="font-weight:600; font-size:13px; color:var(--red);">Bank Transfer (NEFT / RTGS / SWIFT)</div>
                       <div style="font-size:11px; color:var(--charcoal-muted);">For domestic & international bulk orders</div>
                     </div>
                   </label>
-                  <div id="bank-details" style="display:none; background:var(--cream); border-radius:8px; padding:14px 16px; font-size:12px; color:var(--charcoal); border:1px dashed var(--gold); line-height:1.8;">
-                    <div style="font-weight:700; color:var(--forest-deep); margin-bottom:6px;">🏦 INDIBUZ Bank Account Details</div>
+                  <div id="bank-details" style="display:none; background:var(--cream); border-radius:8px; padding:14px 16px; font-size:12px; color:var(--charcoal); border:1px dashed var(--red); line-height:1.8;">
+                    <div style="font-weight:700; color:var(--red); margin-bottom:6px;">🏦 INDIBUZ Bank Account Details</div>
                     <table style="width:100%; border-collapse:collapse;">
                       <tr><td style="color:var(--charcoal-muted); padding:2px 0; width:40%;">Account Name</td><td style="font-weight:600;">INDIBUZ TRADING</td></tr>
                       <tr><td style="color:var(--charcoal-muted); padding:2px 0;">Account No.</td><td style="font-weight:600;">50200098765432</td></tr>
@@ -194,16 +194,16 @@ export function renderCart() {
 
                   <!-- UPI -->
                   <label id="pay-label-upi" style="display:flex; align-items:center; gap:10px; padding:12px 14px; border-radius:8px; border:2px solid #ddd; cursor:pointer; background:#fff; transition:all 0.2s;" onclick="selectPayment('upi')">
-                    <input type="radio" name="payment_method" value="upi" id="pay-upi" style="width:16px;height:16px;accent-color:var(--forest-deep);" />
+                    <input type="radio" name="payment_method" value="upi" id="pay-upi" style="width:16px;height:16px;accent-color:var(--red);" />
                     <span style="font-size:22px;">📱</span>
                     <div>
-                      <div style="font-weight:600; font-size:13px; color:var(--forest-deep);">UPI Payment</div>
+                      <div style="font-weight:600; font-size:13px; color:var(--red);">UPI Payment</div>
                       <div style="font-size:11px; color:var(--charcoal-muted);">GPay, PhonePe, Paytm, BHIM</div>
                     </div>
                   </label>
-                  <div id="upi-details" style="display:none; background:var(--cream); border-radius:8px; padding:14px 16px; font-size:12px; color:var(--charcoal); border:1px dashed var(--gold); text-align:center;">
-                    <div style="font-weight:700; color:var(--forest-deep); margin-bottom:8px;">📱 UPI Payment Details</div>
-                    <div style="font-size:16px; font-weight:700; color:var(--forest-deep); letter-spacing:0.5px; background:#fff; padding:10px; border-radius:6px; border:1px solid #ddd;">
+                  <div id="upi-details" style="display:none; background:var(--cream); border-radius:8px; padding:14px 16px; font-size:12px; color:var(--charcoal); border:1px dashed var(--red); text-align:center;">
+                    <div style="font-weight:700; color:var(--red); margin-bottom:8px;">📱 UPI Payment Details</div>
+                    <div style="font-size:16px; font-weight:700; color:var(--red); letter-spacing:0.5px; background:#fff; padding:10px; border-radius:6px; border:1px solid #ddd;">
                       iindibuztrader@okicici
                     </div>
                     <p style="margin:8px 0 0 0; font-size:11px; color:var(--charcoal-muted);">Scan QR or pay directly to this UPI ID. Share screenshot after payment.</p>
@@ -211,20 +211,20 @@ export function renderCart() {
 
                   <!-- WhatsApp Order -->
                   <label id="pay-label-whatsapp" style="display:flex; align-items:center; gap:10px; padding:12px 14px; border-radius:8px; border:2px solid #ddd; cursor:pointer; background:#fff; transition:all 0.2s;" onclick="selectPayment('whatsapp')">
-                    <input type="radio" name="payment_method" value="whatsapp" id="pay-whatsapp" style="width:16px;height:16px;accent-color:var(--forest-deep);" />
+                    <input type="radio" name="payment_method" value="whatsapp" id="pay-whatsapp" style="width:16px;height:16px;accent-color:var(--red);" />
                     <span style="font-size:22px;">💬</span>
                     <div>
-                      <div style="font-weight:600; font-size:13px; color:var(--forest-deep);">Order via WhatsApp</div>
+                      <div style="font-weight:600; font-size:13px; color:var(--red);">Order via WhatsApp</div>
                       <div style="font-size:11px; color:var(--charcoal-muted);">Discuss payment & terms directly with team</div>
                     </div>
                   </label>
 
                   <!-- Cash on Delivery -->
                   <label id="pay-label-cod" style="display:flex; align-items:center; gap:10px; padding:12px 14px; border-radius:8px; border:2px solid #ddd; cursor:pointer; background:#fff; transition:all 0.2s;" onclick="selectPayment('cod')">
-                    <input type="radio" name="payment_method" value="cod" id="pay-cod" style="width:16px;height:16px;accent-color:var(--forest-deep);" />
+                    <input type="radio" name="payment_method" value="cod" id="pay-cod" style="width:16px;height:16px;accent-color:var(--red);" />
                     <span style="font-size:22px;">💵</span>
                     <div>
-                      <div style="font-weight:600; font-size:13px; color:var(--forest-deep);">Cash on Delivery (COD)</div>
+                      <div style="font-weight:600; font-size:13px; color:var(--red);">Cash on Delivery (COD)</div>
                       <div style="font-size:11px; color:var(--charcoal-muted);">Pay in cash when your order arrives</div>
                     </div>
                   </label>
@@ -279,7 +279,7 @@ export function initCartEvents() {
     });
     // Highlight selected
     const selected = document.getElementById(labels[method]);
-    if (selected) { selected.style.border = '2px solid var(--forest-deep)'; selected.style.background = 'var(--cream)'; }
+    if (selected) { selected.style.border = '2px solid var(--red)'; selected.style.background = 'var(--cream)'; }
 
     // Hide all detail panels
     Object.values(details).forEach(id => {

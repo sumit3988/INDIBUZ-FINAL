@@ -9,8 +9,8 @@ export function renderContact() {
     <!-- Page Hero -->
     <section class="page-hero">
       <div class="hero-bg">
-        <div class="img-placeholder" style="background-color:var(--forest-deep);" role="img" aria-label="Contact INDIBUZ">
-          <div style="position:absolute;inset:0;background:linear-gradient(135deg, rgba(15,42,30,0.9) 0%, rgba(27,61,47,0.75) 100%);"></div>
+        <div class="img-placeholder" style="background-color:var(--charcoal);" role="img" aria-label="Contact INDIBUZ">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg, rgba(30, 30, 30,0.9) 0%, rgba(40, 40, 40,0.75) 100%);"></div>
         </div>
       </div>
       <div class="hero-overlay"></div>
@@ -94,7 +94,7 @@ export function renderContact() {
 
               <!-- QR Code Section -->
               <div style="margin-top:var(--space-2xl);text-align:center;">
-                <h4 style="font-size:var(--text-sm);color:var(--gold);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:var(--space-md);">${t('contact.qrTitle')}</h4>
+                <h4 style="font-size:var(--text-sm);color:var(--red);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:var(--space-md);">${t('contact.qrTitle')}</h4>
                 <div class="qr-container" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.1);">
                   <div class="qr-code" id="qr-code" style="background:var(--white);">
                     <!-- QR code generated via SVG -->
@@ -102,44 +102,44 @@ export function renderContact() {
                       <!-- Simplified QR representation -->
                       <rect width="150" height="150" fill="white"/>
                       <!-- Corner markers -->
-                      <rect x="10" y="10" width="30" height="30" fill="var(--forest-deep)"/>
+                      <rect x="10" y="10" width="30" height="30" fill="var(--charcoal)"/>
                       <rect x="15" y="15" width="20" height="20" fill="white"/>
-                      <rect x="19" y="19" width="12" height="12" fill="var(--forest-deep)"/>
+                      <rect x="19" y="19" width="12" height="12" fill="var(--charcoal)"/>
 
-                      <rect x="110" y="10" width="30" height="30" fill="var(--forest-deep)"/>
+                      <rect x="110" y="10" width="30" height="30" fill="var(--charcoal)"/>
                       <rect x="115" y="15" width="20" height="20" fill="white"/>
-                      <rect x="119" y="19" width="12" height="12" fill="var(--forest-deep)"/>
+                      <rect x="119" y="19" width="12" height="12" fill="var(--charcoal)"/>
 
-                      <rect x="10" y="110" width="30" height="30" fill="var(--forest-deep)"/>
+                      <rect x="10" y="110" width="30" height="30" fill="var(--charcoal)"/>
                       <rect x="15" y="115" width="20" height="20" fill="white"/>
-                      <rect x="19" y="119" width="12" height="12" fill="var(--forest-deep)"/>
+                      <rect x="19" y="119" width="12" height="12" fill="var(--charcoal)"/>
 
                       <!-- Data pattern -->
-                      <rect x="50" y="10" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="62" y="10" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="74" y="10" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="86" y="16" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="50" y="22" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="68" y="22" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="80" y="22" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="50" y="50" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="62" y="50" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="74" y="50" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="86" y="50" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="98" y="50" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="50" y="62" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="74" y="62" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="86" y="62" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="50" y="74" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="62" y="74" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="86" y="74" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="98" y="74" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="50" y="86" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="62" y="86" width="6" height="6" fill="var(--forest-deep)"/>
-                      <rect x="74" y="86" width="6" height="6" fill="var(--forest-deep)"/>
+                      <rect x="50" y="10" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="62" y="10" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="74" y="10" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="86" y="16" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="50" y="22" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="68" y="22" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="80" y="22" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="50" y="50" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="62" y="50" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="74" y="50" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="86" y="50" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="98" y="50" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="50" y="62" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="74" y="62" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="86" y="62" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="50" y="74" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="62" y="74" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="86" y="74" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="98" y="74" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="50" y="86" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="62" y="86" width="6" height="6" fill="var(--charcoal)"/>
+                      <rect x="74" y="86" width="6" height="6" fill="var(--charcoal)"/>
 
                       <!-- Center branding -->
-                      <rect x="60" y="60" width="30" height="30" rx="4" fill="var(--gold)"/>
+                      <rect x="60" y="60" width="30" height="30" rx="4" fill="var(--red)"/>
                       <text x="75" y="79" text-anchor="middle" fill="white" font-size="10" font-weight="bold" font-family="sans-serif">IB</text>
                     </svg>
                   </div>
@@ -151,7 +151,7 @@ export function renderContact() {
 
           <!-- Contact Form -->
           <div class="contact-form-wrap reveal-right" id="contact-form-wrap">
-            <h3 style="font-family:var(--font-heading);font-size:var(--text-2xl);color:var(--forest-deep);margin-bottom:var(--space-xl);">${t('contact.formTitle')}</h3>
+            <h3 style="font-family:var(--font-heading);font-size:var(--text-2xl);color:var(--charcoal);margin-bottom:var(--space-xl);">${t('contact.formTitle')}</h3>
             <div class="form-fields">
               <form id="contact-form" novalidate>
                 <div class="form-group">
@@ -206,8 +206,8 @@ export function renderContact() {
           <hr class="divider divider-center reveal">
         </div>
         <div class="reveal" style="max-width:600px;margin:0 auto;text-align:center;">
-          <h3 style="font-family:var(--font-heading);font-size:var(--text-xl);color:var(--forest-deep);margin-bottom:var(--space-xs);">Sadanand Kumar Mahato</h3>
-          <p style="color:var(--gold);font-weight:500;font-size:var(--text-sm);margin-bottom:var(--space-md);">Sales Team — Indibuz Trader</p>
+          <h3 style="font-family:var(--font-heading);font-size:var(--text-xl);color:var(--charcoal);margin-bottom:var(--space-xs);">Sadanand Kumar Mahato</h3>
+          <p style="color:var(--red);font-weight:500;font-size:var(--text-sm);margin-bottom:var(--space-md);">Sales Team — Indibuz Trader</p>
           <p style="color:var(--charcoal-muted);font-size:var(--text-sm);line-height:1.7;">
             For product inquiries, pricing, samples, or partnership discussions, reach out directly. We respond to all inquiries within 24 hours.
           </p>

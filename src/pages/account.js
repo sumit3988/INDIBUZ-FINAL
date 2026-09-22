@@ -5,7 +5,7 @@ export function renderAccount() {
   return `
     <style>
         .account-container { padding: 40px 20px; max-width: 1000px; margin: 0 auto; min-height: 500px; }
-        .account-header { margin-bottom: 30px; border-bottom: 2px solid var(--gold); padding-bottom: 10px; }
+        .account-header { margin-bottom: 30px; border-bottom: 2px solid var(--red); padding-bottom: 10px; }
         .order-card { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
         .order-card-header { display: flex; justify-content: space-between; margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
         .status-badge { padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; }
@@ -15,7 +15,7 @@ export function renderAccount() {
         .status-cancelled { background: #ffebee; color: #d32f2f; }
         .nav-tabs { display: flex; gap: 20px; margin-bottom: 20px; }
         .nav-tab { background: none; border: none; font-size: 16px; font-weight: bold; color: var(--charcoal-muted); cursor: pointer; padding-bottom: 5px; }
-        .nav-tab.active { color: var(--forest-deep); border-bottom: 2px solid var(--forest-deep); }
+        .nav-tab.active { color: var(--red); border-bottom: 2px solid var(--red); }
     </style>
     <!-- Page Hero -->
     <section class="page-hero" style="min-height: 250px;">
@@ -62,7 +62,7 @@ export function initAccount() {
             loadProfile();
         } else if (tabId === 'addresses') {
             content.innerHTML = `<div style="background:#fff; padding:30px; border-radius:8px; border:1px solid #ddd; text-align:center;">
-                <h3 style="color:var(--forest-deep); margin-bottom:10px;">Address Management</h3>
+                <h3 style="color:var(--red); margin-bottom:10px;">Address Management</h3>
                 <p style="color:var(--charcoal-muted);">This feature will be fully implemented in a future phase.</p>
             </div>`;
         }
@@ -145,7 +145,7 @@ export function initAccount() {
             const p = user.profile || {};
             content.innerHTML = `
                 <div style="background:#fff; border: 1px solid #ddd; border-radius: 8px; padding: 30px;">
-                    <h3 style="color:var(--forest-deep); margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px;">Personal Information</h3>
+                    <h3 style="color:var(--red); margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px;">Personal Information</h3>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                         <div>
                             <strong style="color:var(--charcoal-muted); font-size:12px; text-transform:uppercase;">Name</strong>

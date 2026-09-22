@@ -29,9 +29,9 @@
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(15, 42, 30, 0.7) 0%,
-    rgba(15, 42, 30, 0.5) 50%,
-    rgba(15, 42, 30, 0.8) 100%
+    rgba(30, 30, 30, 0.7) 0%,
+    rgba(30, 30, 30, 0.5) 50%,
+    rgba(30, 30, 30, 0.8) 100%
   );
   z-index: 1;
 }
@@ -50,7 +50,7 @@
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--red);
   margin-bottom: var(--space-lg);
   display: block;
 }
@@ -66,7 +66,7 @@
 
 .hero-title em {
   font-style: italic;
-  color: var(--gold);
+  color: var(--red);
 }
 
 .hero-subtitle {
@@ -93,14 +93,14 @@
   justify-content: center;
   overflow: hidden;
   padding-top: var(--header-height);
-  background-color: var(--forest-deep);
+  background-color: var(--charcoal);
 }
 
 .page-hero .hero-overlay {
   background: linear-gradient(
     to bottom,
-    rgba(15, 42, 30, 0.6) 0%,
-    rgba(15, 42, 30, 0.85) 100%
+    rgba(30, 30, 30, 0.6) 0%,
+    rgba(30, 30, 30, 0.85) 100%
   );
 }
 
@@ -131,7 +131,7 @@
 
 .brand-title {
   font-size: var(--text-3xl);
-  color: var(--forest-deep);
+  color: var(--charcoal);
   margin-bottom: var(--space-lg);
 }
 
@@ -157,7 +157,7 @@
   left: -20px;
   width: 80px;
   height: 80px;
-  background-color: var(--gold);
+  background-color: var(--red);
   opacity: 0.15;
   z-index: -1;
 }
@@ -177,7 +177,7 @@
 /* ---------- Home: Why INDIBUZ ---------- */
 .why-section {
   padding-block: var(--space-section);
-  background-color: var(--cream);
+  background-color: var(--white);
 }
 
 .why-grid {
@@ -189,7 +189,7 @@
 /* ---------- Home: CTA Section ---------- */
 .cta-section {
   padding-block: var(--space-section);
-  background-color: var(--forest);
+  background-color: var(--red);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -270,7 +270,7 @@
 
 .about-philosophy {
   padding-block: var(--space-section);
-  background-color: var(--cream);
+  background-color: var(--white);
 }
 
 .philosophy-grid {
@@ -288,13 +288,13 @@
   width: 48px;
   height: 48px;
   margin: 0 auto var(--space-md);
-  color: var(--gold);
+  color: var(--red);
 }
 
 .philosophy-title {
   font-family: var(--font-heading);
   font-size: var(--text-xl);
-  color: var(--forest-deep);
+  color: var(--charcoal);
   margin-bottom: var(--space-sm);
 }
 
@@ -331,7 +331,7 @@
 
 .quality-process {
   padding-block: var(--space-section);
-  background-color: var(--cream);
+  background-color: var(--white);
 }
 
 /* ---------- Certifications Page ---------- */
@@ -358,20 +358,20 @@
 }
 
 .world-map-svg .land {
-  fill: var(--cream-dark);
+  fill: var(--ivory);
   stroke: var(--ivory);
   stroke-width: 0.5;
   transition: fill var(--transition-fast);
 }
 
 .world-map-svg .highlighted {
-  fill: var(--gold);
+  fill: var(--red);
   cursor: pointer;
   transition: fill var(--transition-fast);
 }
 
 .world-map-svg .highlighted:hover {
-  fill: var(--gold-light);
+  fill: var(--red);
 }
 
 .markets-list {
@@ -398,13 +398,13 @@
   font-family: var(--font-heading);
   font-size: var(--text-xl);
   font-weight: 700;
-  color: var(--forest-deep);
+  color: var(--charcoal);
   margin-bottom: var(--space-sm);
 }
 
 .market-countries {
   font-size: var(--text-sm);
-  color: var(--gold);
+  color: var(--red);
   font-weight: 500;
   margin-bottom: var(--space-md);
 }
@@ -417,8 +417,8 @@
 }
 
 @keyframes pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(197,150,58,0.4); }
-  50% { box-shadow: 0 0 0 8px rgba(197,150,58,0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(200, 16, 46,0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(200, 16, 46,0); }
 }
 
 
@@ -447,14 +447,14 @@
   width: 48px;
   height: 48px;
   margin: 0 auto var(--space-md);
-  color: var(--gold);
+  color: var(--red);
 }
 
 .partner-benefit-title {
   font-family: var(--font-heading);
   font-size: var(--text-lg);
   font-weight: 600;
-  color: var(--forest-deep);
+  color: var(--charcoal);
   margin-bottom: var(--space-sm);
 }
 
@@ -478,7 +478,7 @@
 }
 
 .contact-info-card {
-  background-color: var(--forest-deep);
+  background-color: var(--charcoal);
   color: var(--ivory);
   padding: var(--space-3xl);
   position: relative;
@@ -525,9 +525,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(197, 150, 58, 0.15);
+  background-color: rgba(200, 16, 46, 0.15);
   border-radius: 50%;
-  color: var(--gold);
+  color: var(--red);
 }
 
 .contact-detail-text {
@@ -536,7 +536,7 @@
 
 .contact-detail-label {
   font-weight: 600;
-  color: var(--gold);
+  color: var(--red);
   font-size: var(--text-xs);
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -554,7 +554,7 @@
 }
 
 .contact-detail-value a:hover {
-  color: var(--gold);
+  color: var(--red);
 }
 
 .contact-form-wrap {

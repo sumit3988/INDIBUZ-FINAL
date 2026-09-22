@@ -5,27 +5,23 @@
 /* ---------- Design Tokens ---------- */
 :root {
   /* Brand Colors */
-  --gold: #C5963A;
-  --gold-light: #D4A94E;
-  --gold-dark: #A67B2E;
-  --forest: #1B3D2F;
-  --forest-deep: #0F2A1E;
-  --forest-light: #2A5A44;
-  --ivory: #F5F0E8;
-  --cream: #EDE6D8;
-  --cream-dark: #DDD4C2;
-  --charcoal: #2C2C2C;
-  --charcoal-muted: #5A5A5A;
-  --charcoal-light: #7A7A7A;
-  --burgundy: #6B1D2A;
-  --burgundy-light: #8A2838;
-  --amber: #D4770B;
+  --red: #C8102E;
+  --red-light: #E4334F;
+  --red-dark: #9A0B22;
+  --gold: #F7B500;
+  --gold-light: #FFC933;
+  --gold-dark: #C99300;
   --white: #FFFFFF;
-  --black: #111111;
+  --ivory: #F8F9FA;
+  --cream: #F1F3F5;
+  --charcoal: #111111;
+  --charcoal-muted: #555555;
+  --charcoal-light: #888888;
+  --black: #000000;
 
   /* Functional Colors */
   --success: #2D7A4F;
-  --error: #B33A3A;
+  --error: #C8102E;
   --error-light: #FDEAEA;
   --whatsapp: #25D366;
 
@@ -75,7 +71,7 @@
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
-  --shadow-gold: 0 4px 20px rgba(197, 150, 58, 0.2);
+  --shadow-gold: 0 4px 20px rgba(200, 16, 46, 0.2);
 
   /* Grain texture overlay */
   --grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
@@ -100,27 +96,15 @@ body {
   font-family: var(--font-body);
   font-size: var(--text-base);
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.6;
   color: var(--charcoal);
-  background-color: var(--ivory);
+  background-color: var(--white);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Grain texture on body */
-body::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: var(--grain);
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.3;
-}
+/* Removed grain texture */
 
 img {
   max-width: 100%;
@@ -153,10 +137,10 @@ input, textarea, select {
 /* ---------- Typography ---------- */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
-  color: var(--forest-deep);
-  letter-spacing: -0.01em;
+  color: var(--charcoal);
+  letter-spacing: -0.02em;
 }
 
 h1 { font-size: var(--text-hero); font-weight: 700; }
@@ -170,8 +154,8 @@ p {
   margin-bottom: var(--space-md);
 }
 
-.text-gold { color: var(--gold); }
-.text-forest { color: var(--forest); }
+.text-gold { color: var(--red); }
+.text-red { color: var(--red); }
 .text-ivory { color: var(--ivory); }
 .text-white { color: var(--white); }
 .text-muted { color: var(--charcoal-muted); }
@@ -217,14 +201,14 @@ p {
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--red);
   display: block;
   margin-bottom: var(--space-sm);
 }
 
 .section-title {
   font-size: var(--text-4xl);
-  color: var(--forest-deep);
+  color: var(--charcoal);
   margin-bottom: var(--space-md);
 }
 
@@ -238,9 +222,9 @@ p {
 
 /* ---------- Backgrounds ---------- */
 .bg-ivory { background-color: var(--ivory); }
-.bg-cream { background-color: var(--cream); }
-.bg-forest { background-color: var(--forest); color: var(--ivory); }
-.bg-forest-deep { background-color: var(--forest-deep); color: var(--ivory); }
+.bg-cream { background-color: var(--white); }
+.bg-red { background-color: var(--red); color: var(--white); }
+.bg-dark { background-color: var(--charcoal); color: var(--white); }
 .bg-white { background-color: var(--white); }
 
 /* ---------- Utility ---------- */
@@ -317,7 +301,7 @@ p {
 
 /* Image placeholder containers */
 .img-placeholder {
-  background-color: var(--forest-deep);
+  background-color: var(--white);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -335,7 +319,7 @@ p {
 }
 
 .img-placeholder-light {
-  background-color: var(--cream);
+  background-color: var(--white);
 }
 
 .img-placeholder-light::before {
@@ -344,7 +328,7 @@ p {
 
 /* Placeholder icon */
 .img-placeholder-icon {
-  color: var(--forest-light);
+  color: var(--charcoal-light);
   opacity: 0.3;
 }
 
@@ -357,7 +341,7 @@ p {
 .divider {
   width: 60px;
   height: 2px;
-  background-color: var(--gold);
+  background-color: var(--red);
   border: none;
   margin-block: var(--space-lg);
 }
@@ -368,7 +352,7 @@ p {
 
 /* Selection color */
 ::selection {
-  background-color: var(--gold);
+  background-color: var(--red);
   color: var(--white);
 }
 

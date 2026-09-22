@@ -5,7 +5,7 @@ import csv
 from django.http import HttpResponse
 from .models import (
     Category, Brand, Product, ProductImage, ProductVideo, ProductVariant,
-    StockMovementLog, Coupon, UserProfile, ShippingAddress, Order, OrderItem,
+    StockMovementLog, Coupon, ShippingAddress, Order, OrderItem,
     ProductReview, Wishlist, ContactMessage, PartnerLead
 )
 

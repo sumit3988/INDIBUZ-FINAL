@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from .models import (
     Category, Brand, Product, ProductImage, ProductVariant, ProductVideo,
-    Order, OrderItem, ShippingAddress, Coupon, UserProfile, ProductReview,
+    Order, OrderItem, ShippingAddress, Coupon, ProductReview,
     Wishlist, ContactMessage, PartnerLead
 )
 from django.contrib.auth.models import User
