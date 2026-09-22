@@ -8,6 +8,7 @@ Modified for production deployment (Render + PostgreSQL + WhiteNoise + CORS).
 from pathlib import Path
 from decouple import config, Csv
 import dj_database_url
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -97,7 +98,12 @@ WSGI_APPLICATION = 'indibuz_core.wsgi.application'
 
 
 # Database
-# Uses DATABASE_URL environment variable if present (PostgreSQL on Render/Neon), falls back to SQLite for local dev
+# Ensure sslmode=require is in DATABASE_URL for Render PostgreSQL
+database_url = os.environ.get('DATABASE_URL', '')
+if database_url and 'sslmode' not in database_url:
+    separator = '&' if '?' in database_url else '?'
+    os.environ['DATABASE_URL'] = f"{database_url}{separator}sslmode=require"
+
 DATABASES = {
     'default': dj_database_url.config(
         default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
@@ -105,11 +111,6 @@ DATABASES = {
         conn_health_checks=True,
     )
 }
-
-# Render PostgreSQL requires SSL for connections
-if not DEBUG and 'postgresql' in DATABASES['default'].get('ENGINE', ''):
-    DATABASES['default'].setdefault('OPTIONS', {})
-    DATABASES['default']['OPTIONS']['sslmode'] = 'require'
 
 
 # Password validation
