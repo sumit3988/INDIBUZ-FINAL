@@ -103,9 +103,13 @@ DATABASES = {
         default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
         conn_max_age=600,
         conn_health_checks=True,
-        ssl_require=not DEBUG,
     )
 }
+
+# Render PostgreSQL requires SSL for connections
+if not DEBUG and 'postgresql' in DATABASES['default'].get('ENGINE', ''):
+    DATABASES['default'].setdefault('OPTIONS', {})
+    DATABASES['default']['OPTIONS']['sslmode'] = 'require'
 
 
 # Password validation
